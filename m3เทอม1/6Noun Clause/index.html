@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Noun Clause Mastery</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Noun Clause Mastery</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=pDW7ex7JiCU" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Noun Clause
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-noun', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Noun Clause Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>Noun Clause Masterclass Cheat Sheet</h1>
+        <p>Noun Clause คืออนุประโยคที่ทำหน้าที่เหมือน "คำนาม" สามารถเป็นได้ทั้งประธาน กรรม และส่วนเติมเต็มในประโยคหลัก!
+        </p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- That Clauses -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-quote-left text-primary"></i> That-Clause</h3>
+            <span class="tag blue">บอกข้อเท็จจริง</span>
+          </div>
+          <p class="theory-desc">ใช้บอกข้อความหรือความจริง นำหน้าด้วย <b>that (ว่า...)</b></p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code><b>that + Subject + Verb</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example</div>
+            <code>I know <b>that she is a doctor</b>.</code>
+          </div>
+        </div>
+
+        <!-- Question Word Clauses -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-circle-question text-primary"></i> WH-Words & If/Whether</h3>
+            <span class="tag purple">เรียงลำดับแบบบอกเล่า</span>
+          </div>
+          <p class="theory-desc">ข้อควรระวัง: แม้จะมาจากประโยคคำถาม แต่ใน Noun Clause ต้องเรียงแบบ <b>Subject + Verb</b>
+            (ไม่ใช่กริยาช่วยขึ้นก่อน!)</p>
+          <div class="formula-box">
+            <div class="formula-title">WH-Question Words</div>
+            <code>I don't know <b>where he lives</b>. (ไม่ใช่ where does he live)</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Yes/No Questions (If / Whether)</div>
+            <code>She asked <b>if I was ready</b>.</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Noun Clause Drill -->
+    <div id="tab-noun" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Noun Clause Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="noun-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="noun-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="noun-options-container"></div>
+
+        <div class="feedback-box hidden" id="noun-feedback">
+          <div class="feedback-header" id="noun-fb-title"></div>
+          <div class="feedback-text" id="noun-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="noun-next-btn" onclick="generateNounQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

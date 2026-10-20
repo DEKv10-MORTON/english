@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dek Morton Studio Showcase</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MathJax for formula rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="flex flex-col h-screen overflow-hidden bg-[#030305] text-white">
+
+    <header class="flex-none pt-1 pb-1 px-6 text-center border-b border-purple-900/20 bg-[#030305]/90 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-center gap-2 py-0">
+            <div class="header-formula tracking-wider flex items-center gap-2 text-lg md:text-2xl">
+                <!-- ลดขนาดสัญลักษณ์รากและข้อความให้เล็กลง -->
+
+                <span class="text-lg md:text-2xl font-semibold tracking-wide text-white">Dek Morton Studio</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 min-h-0 max-w-7xl w-full mx-auto px-4 md:px-8 py-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full max-h-full">
+
+            <!-- COLUMN 1: Grade 7 -->
+            <div class="flex flex-col h-full min-h-0 bg-black/20 rounded-2xl p-3 border border-white/5">
+                <div class="flex-none mb-3 px-2">
+                    <h2 class="text-lg font-bold text-black tracking-wide">มัธยมศึกษาปีที่ 1</h2>
+                    <p class="text-xs text-black font-medium tracking-wider">Grade 7</p>
+                </div>
+                <!-- คอนเทนเนอร์แสดงผล Card ม.1 -->
+                <div id="grade-7-container" class="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-2 space-y-4">
+                </div>
+            </div>
+
+            <!-- COLUMN 2: Grade 8 -->
+            <div class="flex flex-col h-full min-h-0 bg-black/20 rounded-2xl p-3 border border-white/5">
+                <div class="flex-none mb-3 px-2">
+                    <h2 class="text-lg font-bold text-black tracking-wide">มัธยมศึกษาปีที่ 2</h2>
+                    <p class="text-xs text-black font-medium tracking-wider">Grade 8</p>
+                </div>
+                <!-- คอนเทนเนอร์แสดงผล Card ม.2 -->
+                <div id="grade-8-container" class="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-2 space-y-4">
+                </div>
+            </div>
+
+            <!-- COLUMN 3: Grade 9 -->
+            <div class="flex flex-col h-full min-h-0 bg-black/20 rounded-2xl p-3 border border-white/5">
+                <div class="flex-none mb-3 px-2">
+                    <h2 class="text-lg font-bold text-black tracking-wide">มัธยมศึกษาปีที่ 3</h2>
+                    <p class="text-xs text-black font-medium tracking-wider">Grade 9</p>
+                </div>
+                <!-- คอนเทนเนอร์แสดงผล Card ม.3 -->
+                <div id="grade-9-container" class="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-2 space-y-4">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="flex-none py-3 px-6 border-t border-purple-900/30 bg-[#030305]/95">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-3">
+
+            <!-- ฝั่งซ้าย: Presented By -->
+            <div class="flex items-center gap-2">
+                <span class="font-semibold text-gray-300">Presented By : Power of 10 Science Project. (Thanyaburi
+                    School)</span>
+            </div>
+
+            <!-- ฝั่งขวา: ปุ่มเครื่องมือ & ช่องทางสนับสนุน -->
+            <div class="flex flex-wrap items-center gap-3">
+
+                <!-- 1. ปุ่ม Counter (นับจำนวนผู้เข้าชม) -->
+                <div class="flex items-center gap-1.5 bg-black/40 px-2.5 py-1 rounded-full border border-purple-900/40">
+                    <span class="text-[10px] text-gray-400">Visitors:</span>
+                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdekmorton.github.io%2Fmath-portal&count_bg=%238B5CF6&title_bg=%23111827&icon=&icon_color=%23E5E7EB&title=VISITS&edge_flat=false"
+                        alt="Visitor Counter" class="h-4" />
+                </div>
+
+                <!-- ปุ่มเกม (Interactive Game Button) -->
+                <a href="pagegame/index.html" target="_blank" rel="noopener noreferrer" class="..." id="support-btn">
+                    <div class="coffee-btn-inner">
+
+                        <!-- SVG หน้ายิ้มดุ๊กดิ๊ก ขยับตามเมาส์ / หลับตาได้ -->
+                        <div class="smiley-container relative w-5 h-5 flex items-center justify-center">
+                            <!-- หน้ายิ้มตอนตื่น (ดวงตามองตามเมาส์) -->
+                            <svg id="smiley-awake" class="w-5 h-5 transition-opacity duration-300"
+                                viewBox="0 0 100 100">
+                                <!-- ใบหน้าเหลือง -->
+                                <circle cx="50" cy="50" r="45" fill="#FBBF24" stroke="#F59E0B" stroke-width="4" />
+
+                                <!-- ตาขาวซ้าย-ขวา -->
+                                <circle cx="35" cy="40" r="9" fill="#FFFFFF" />
+                                <circle cx="65" cy="40" r="9" fill="#FFFFFF" />
+
+                                <!-- รูม่านตาดำ (จะขยับด้วย JS) -->
+                                <circle id="pupil-left" cx="35" cy="40" r="4" fill="#18181B" />
+                                <circle id="pupil-right" cx="65" cy="40" r="4" fill="#18181B" />
+
+                                <!-- รอยยิ้ม -->
+                                <path d="M 28 60 Q 50 82 72 60" fill="none" stroke="#18181B" stroke-width="6"
+                                    stroke-linecap="round" />
+                            </svg>
+
+                            <!-- หน้ายิ้มตอนหลับ (จะแสดงเมื่อเมาส์นิ่ง) -->
+                            <svg id="smiley-asleep"
+                                class="w-5 h-5 absolute inset-0 opacity-0 transition-opacity duration-300"
+                                viewBox="0 0 100 100">
+                                <!-- ใบหน้าเหลือง -->
+                                <circle cx="50" cy="50" r="45" fill="#FCD34D" stroke="#F59E0B" stroke-width="4" />
+
+                                <!-- ตาหลับ ^ ^ -->
+                                <path d="M 28 42 Q 35 34 42 42" fill="none" stroke="#18181B" stroke-width="5"
+                                    stroke-linecap="round" />
+                                <path d="M 58 42 Q 65 34 72 42" fill="none" stroke="#18181B" stroke-width="5"
+                                    stroke-linecap="round" />
+
+                                <!-- รอยยิ้มตอนหลับ -->
+                                <path d="M 32 62 Q 50 75 68 62" fill="none" stroke="#18181B" stroke-width="5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+
+                        <span class="coffee-text">"Let's play games"</span>
+                    </div>
+                </a>
+
+                <!-- 3. ปุ่ม YouTube -->
+                <a href="#"
+                    class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition-all duration-200 opacity-60 cursor-not-allowed"
+                    title="Coming Soon">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    <span class="font-medium">YouTube</span>
+                </a>
+
+                <!-- 4. ปุ่ม Contact Us -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mortontbv10@gmail.com&su=สอบถามข้อมูลเพิ่มเติมจากหน้า%20Dek%20Morton%20Studio"
+                    target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition-all duration-200">
+                    <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span class="font-medium">Contact Us</span>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. ตัวแปรเก็บข้อมูล Card ทั้งหมด แยกตามระดับชั้น
+        const cardsData = {
+            grade7: [
+                { title: 'เหตุการณ์ที่กำลังเกิดขึ้นเฉพาะหน้าขณะนี้!', subTitle: 'Present Simple & Continuous', img: 'm1เทอม1/1Present Simple & Continuous/pic.jpg', link: 'm1เทอม1/1Present Simple & Continuous/index.html' },
+                { title: 'เรียนรู้วิธีการเล่าเรื่องราวในอดีต เหตุการณ์ที่เกิดขึ้นและจบลงไปแล้วอย่างสมบูรณ์', subTitle: 'Past Simple Tense', img: 'm1เทอม1/2Past Simple Tense/pic.jpg', link: 'm1เทอม1/2Past Simple Tense/index.html' },
+                { title: 'ทำความเข้าใจหัวใจของประโยคภาษาอังกฤษ', subTitle: 'Main Verb', img: 'm1เทอม1/3Main Verb/pic.jpg', link: 'm1เทอม1/3Main Verb/index.html' },
+                { title: 'การจัดเรียงส่วนประกอบของประโยคภาษาอังกฤษขั้นพื้นฐาน', subTitle: 'Sentence Construction', img: 'm1เทอม1/4Sentence Construction/pic.jpg', link: 'm1เทอม1/4Sentence Construction/index.html' },
+                { title: 'เรียนรู้หน้าที่ของคำคุณศัพท์ในการขยายคำนาม', subTitle: 'Adjective', img: 'm1เทอม1/5Adjective/pic.jpg', link: 'm1เทอม1/5Adjective/index.html' },
+                { title: 'หน้าที่ของคำวิเศษณ์ ', subTitle: 'Adverb', img: 'm1เทอม1/6Adverb/pic.jpg', link: 'm1เทอม1/6Adverb/index.html' },
+                { title: 'แบบทดสอบแนวข้อสอบ เทอม1', subTitle: 'Term 1 Final Exam', img: 'm1เทอม1/7Term 1 Comprehensive Final Exam/pic.jpg', link: 'm1เทอม1/7Term 1 Comprehensive Final Exam/index.html' },
+                { title: 'เรียนรู้วิธีการพูดถึงอนาคต', subTitle: 'Future Simple Tense', img: 'm1เทอม2/1Future Simple Tense/pic.jpg', link: 'm1เทอม2/1Future Simple Tense/index.html' },
+                { title: 'สำนวนภาษาอังกฤษสำหรับการสนทนาในชีวิตประจำวัน', subTitle: 'Conversation', img: 'm1เทอม2/2Conversation/pic.jpg', link: 'm1เทอม2/2Conversation/index.html' },
+                { title: 'ความต่างระหว่าง Adjective ลงท้ายด้วย -ed และ -ing', subTitle: 'Adjective & Adverb', img: 'm1เทอม2/3Adjective & Adverb/pic.jpg', link: 'm1เทอม2/3Adjective & Adverb/index.html' },
+                { title: 'กฎการเปรียบเทียบขั้นกว่า', subTitle: 'Comparison', img: 'm1เทอม2/4Comparison/pic.jpg', link: 'm1เทอม2/4Comparison/index.html' },
+                { title: 'การเลือกใช้คำบอกปริมาณ', subTitle: 'Quantity Words', img: 'm1เทอม2/5Quantity Words/pic.jpg', link: 'm1เทอม2/5Quantity Words/index.html' },
+                { title: 'เรียนรู้โครงสร้างประโยคระดับสูงขึ้น', subTitle: 'Sentence Construction', img: 'm1เทอม2/6Sentence Construction/pic.jpg', link: 'm1เทอม2/6Sentence Construction/index.html' },
+                { title: 'เหตุการณ์ กำลังดำเนินอยู่ ในสามช่วงเวลาหลัก', subTitle: 'Continuous Tenses', img: 'm1เทอม2/7Continuous Tenses/pic.jpg', link: 'm1เทอม2/7Continuous Tenses/index.html' },
+                { title: 'แบบทดสอบแนวข้อสอบ เทอม2', subTitle: 'Term 2 Final Exam', img: 'm1เทอม2/8Comprehensive Final Exam/pic.jpg', link: 'm1เทอม2/8Comprehensive Final Exam/index.html' },
+
+
+
+
+            ],
+            grade8: [
+                { title: 'เหตุการณ์ที่เกิดขึ้นและจบลงไปแล้วในอดีต', subTitle: 'Past Simple Tense', img: 'm2เทอม1/1Past_Simple_Tense/pic.jpg', link: 'm2เทอม1/1Past_Simple_Tense/index.html' },
+                { title: 'บอกเหตุการณ์หรือการกระทำที่กำลังเกิดขึ้นและดำเนินอยู่อย่างต่อเนื่องในอดีต', subTitle: 'Past Continuous Tense', img: 'm2เทอม1/2Past_Continuous_Tense/pic.jpg', link: 'm2เทอม1/2Past_Continuous_Tense/index.html' },
+                { title: 'การบอกปริมาณและประเภทของคำนาม', subTitle: 'Quantifiers Uncountable Countable Nouns', img: 'm2เทอม1/3Quantifiers_Uncountable_Countable Nouns/pic.jpg', link: 'm2เทอม1/3Quantifiers_Uncountable_Countable Nouns/index.html' },
+                { title: 'เปรียบเทียบคำนาม 2 สิ่ง ว่าใครหรือสิ่งไหน "กว่า" อีกฝ่ายหนึ่ง', subTitle: 'Comparative & Superlative Adjectives', img: 'm2เทอม1/4Comparative & Superlative Adjectives/pic.jpg', link: 'm2เทอม1/4Comparative & Superlative Adjectives/index.html' },
+                { title: 'ไวยากรณ์ภาษาอังกฤษ', subTitle: 'Advanced Tenses & Verbs', img: 'm2เทอม2/1Advanced Tenses & Verbs/pic.jpg', link: 'm2เทอม2/1Advanced Tenses & Verbs/index.html' },
+                { title: 'ประโยคความซ้อน', subTitle: 'Complex Grammar', img: 'm2เทอม2/2Complex Grammar/pic.png', link: 'm2เทอม2/2Complex Grammar/index.html' },
+                { title: 'ประโยคเงื่อนไข', subTitle: 'Conditionals & Expressing Wishes', img: 'm2เทอม2/3Conditionals & Expressing Wishes/pic.png', link: 'm2เทอม2/3Conditionals & Expressing Wishes/index.html' },
+                { title: 'สรุปใจความหรือเล่าคำพูดนั้น', subTitle: 'Reported Speechindex', img: 'm2เทอม2/4Reported Speech/pic.jpg', link: 'm2เทอม2/4Reported Speech/index.html' },
+                { title: 'ทักษะการฟังเพื่อความเข้าใจ', subTitle: 'Listening Comprehension', img: 'm2เทอม2/5Listening Comprehension/pic.png', link: 'm2เทอม2/5Listening Comprehension/index.html' },
+                { title: 'แนวข้อสอบ', subTitle: 'English Comprehensive Practice', img: 'm2เทอม2/6English Comprehensive Practice (Term 2)/pic.png', link: 'm2เทอม2/6English Comprehensive Practice (Term 2)/index.html' },
+
+
+            ],
+            grade9: [
+                { title: 'ทำความเข้าใจโครงสร้างและการใช้กริยา 3 (V.3) ร่วมกับ Have/Has/Had ', subTitle: 'Perfect Tenses', img: 'm3เทอม1/1Perfect Tenses/pic.jpg', link: 'm3เทอม1/1Perfect Tenses/index.html' },
+                { title: 'ประธานเป็นผู้กระทำ" (Active) สู่ "ประธานเป็นผู้ถูกกระทำ" (Passive)', subTitle: 'Active & Passive Voice', img: 'm3เทอม1/2Active & Passive Voice/pic.jpg', link: 'm3เทอม1/2Active & Passive Voice/index.html' },
+                { title: 'การนำคำพูดของคนอื่นมาเล่าต่อด้วยคำพูดของเราเอง โดยไม่ใช้เครื่องหมายคำพูด', subTitle: 'Reported Speech', img: 'm3เทอม1/3Reported Speech/pic.jpg', link: 'm3เทอม1/3Reported Speech/index.html' },
+                { title: 'คำนำหน้าคำนาม คืออะไร?', subTitle: 'Determiners & Quantifiers', img: 'm3เทอม1/4Determiners & Quantifiers/pic.jpg', link: 'm3เทอม1/4Determiners & Quantifiers/index.html' },
+                { title: 'ประโยคแสดงความปรารถนา', subTitle: 'Wish Statement', img: 'm3เทอม1/5Wish Statement/pic.jpg', link: 'm3เทอม1/5Wish Statement/index.html' },
+                { title: 'ประโยคย่อยที่ทำหน้าที่เสมือน คำนาม ในประโยคหลัก', subTitle: 'Noun Clause', img: 'm3เทอม1/6Noun Clause/pic.jpg', link: 'm3เทอม1/6Noun Clause/index.html' },
+                { title: 'ประโยคเงื่อนไข ', subTitle: 'Conditional Sentences', img: 'm3เทอม1/7Conditional Sentences/pic.jpg', link: 'm3เทอม1/7Conditional Sentences/index.html' },
+                { title: 'แบบทดสอบแนวข้อสอบ เทอม1', subTitle: 'Term 1 Final Exam', img: 'm3เทอม1/8Term 1 Final Exam/pic.jpg', link: 'm3เทอม1/8Term 1 Final Exam/index.html' },
+                { title: 'เทคนิคการโต้แย้งอย่างมีมารยาท ไม่ใช้คำพูดรุนแรงเกินไป และการให้เหตุผล', subTitle: 'Arguments & Disagreements', img: 'm3เทอม2/1Conversation/pic.jpg', link: 'm3เทอม2/1Conversation/index.html' },
+                { title: 'Tenses ใช้เล่าเรื่อง', subTitle: 'Mixed Tenses & Narrative Tenses', img: 'm3เทอม2/2Mixed Tenses & Narrative Tenses/pic.jpg', link: 'm3เทอม2/2Mixed Tenses & Narrative Tenses/index.html' },
+                { title: 'เจาะลึกโครงสร้างประโยคเงื่อนไข', subTitle: 'Conditional Sentences', img: 'm3เทอม2/3Conditional/pic.jpg', link: 'm3เทอม2/3Conditional/index.html' },
+                { title: 'กฎการเลือกใช้รูปกริยาตามหลังคำกริยาหลัก (Verb Pattern)', subTitle: 'Infinitive & Gerund', img: 'm3เทอม2/4Verb Forms/pic.jpg', link: 'm3เทอม2/4Verb Forms/index.html' },
+                { title: 'หลักการวิเคราะห์และมองหาจุดผิดทางไวยากรณ์อย่างเป็นระบบ', subTitle: 'Error Identification', img: 'm3เทอม2/5Error Detection/pic.jpg', link: 'm3เทอม2/5Error Detection/index.html' },
+                { title: 'กฎการสอดคล้องกันระหว่างประธานและกริยา', subTitle: 'Subject-Verb Agreement', img: 'm3เทอม2/6Subject-Verb Agreement/pic.jpg', link: 'm3เทอม2/6Subject-Verb Agreement/index.html' },
+                { title: 'การเลือกใช้ Relative Pronouns (who, whom, whose, which, that)', subTitle: 'Relative Clauses', img: 'm3เทอม2/7Relative Clauses/pic.jpg', link: 'm3เทอม2/7Relative Clauses/index.html' },
+                { title: 'การใช้งานกริยาช่วยกลุ่มกฎระเบียบ คำสั่ง การห้าม และคำแนะนำ', subTitle: 'must, have to, must not, do not', img: 'm3เทอม2/8Modals/pic.jpg', link: 'm3เทอม2/8Modals/index.html' },
+                { title: 'เทคนิคการเดาความหมายคำศัพท์จากบริบท', subTitle: 'Context Clues', img: 'm3เทอม2/9Context Clues/pic.jpg', link: 'm3เทอม2/9Context Clues/index.html' },
+                { title: 'แบบทดสอบแนวข้อสอบ เทอม2', subTitle: 'Term 2 Final Exam', img: 'm3เทอม2/10Final Exam/pic.jpg', link: 'm3เทอม2/10Final Exam/index.html' },
+                { title: 'แนวข้อสอบ Onet', subTitle: 'Onet Part 1', img: 'm3เทอม2/10Final Exam/pic2.jpg', link: 'https://www.youtube.com/watch?v=TADvNSULgJs' },
+                { title: 'แนวข้อสอบ Onet', subTitle: 'Onet Part 2', img: 'm3เทอม2/10Final Exam/pic3.jpg', link: 'https://www.youtube.com/watch?v=QGNNu7C0WLs&t=62s' },
+                { title: 'แนวข้อสอบ Onet', subTitle: 'Onet Part 3', img: 'm3เทอม2/10Final Exam/pic4.jpg', link: 'https://www.youtube.com/watch?v=N5cttjZeTEY' },
+                { title: 'ติวสอบเข้า ม.4', subTitle: 'Entrance exam for grade 10 (M.4)', img: 'm3เทอม2/10Final Exam/pic5.jpg', link: 'https://www.youtube.com/watch?v=ncgyLLhAVcM' },
+
+            ]
+        };
+
+        // 2. ฟังก์ชันสร้าง HTML สำหรับ Block Card 1 ใบ
+        function createCardHTML(card) {
+            const cardInnerHTML = `
+                <div class="card-glow bg-[#080811] rounded-2xl p-3 flex flex-col gap-2">
+                    <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-900">
+                        <img src="${card.img}" alt="${card.title}"
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                            onerror="handleImageError(this, '${card.title}')">
+                    </div>
+                    <div class="pt-1">
+                        <h3 class="font-bold text-base text-white leading-tight">${card.title}</h3>
+                        <p class="text-xs text-purple-300/80 font-light mt-0.5">${card.subTitle}</p>
+                    </div>
+                </div>
+            `;
+
+            // ถ้ามีลิงก์ ให้ครอบด้วย <a> tag ถ้าไม่มีให้แสดงแค่ <div>
+            if (card.link) {
+                return `<a href="${card.link}" target="_blank" class="card-link block">${cardInnerHTML}</a>`;
+            }
+            return cardInnerHTML;
+        }
+
+        // 3. ฟังก์ชัน วาด (Render) Card ทั้งหมดลงใน Container ของแต่ละระดับชั้น
+        function renderAllCards() {
+            document.getElementById('grade-7-container').innerHTML = cardsData.grade7.map(createCardHTML).join('');
+            document.getElementById('grade-8-container').innerHTML = cardsData.grade8.map(createCardHTML).join('');
+            document.getElementById('grade-9-container').innerHTML = cardsData.grade9.map(createCardHTML).join('');
+        }
+
+        // 4. ฟังก์ชันจัดการเมื่อรูปภาพเกิด Error (Fallback)
+        function handleImageError(imgElement, titleText) {
+            imgElement.onerror = null;
+            const svgContent = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+                    <defs>
+                        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#120c24"/>
+                            <stop offset="100%" stop-color="#080511"/>
+                        </linearGradient>
+                        <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#8b5cf6"/>
+                            <stop offset="100%" stop-color="#ec4899"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#bg)"/>
+                    <circle cx="300" cy="140" r="45" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.6"/>
+                    <path d="M285 140 L315 140 M300 125 L300 155" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+                    <rect x="40" y="240" width="520" height="2" fill="url(#accent)" opacity="0.4"/>
+                    <text x="300" y="220" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0.9">
+                        ${escapeXml(titleText)}
+                    </text>
+                    <text x="300" y="280" font-family="sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle" letter-spacing="2">
+                        DEK MORTON STUDIO
+                    </text>
+                </svg>
+            `;
+            imgElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
+        }
+
+        function escapeXml(unsafe) {
+            return unsafe.replace(/[<>&'"]/g, function (c) {
+                switch (c) {
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '&': return '&amp;';
+                    case '\'': return '&apos;';
+                    case '"': return '&quot;';
+                }
+            });
+        }
+
+        // เริ่มแสดงผลเมื่อโหลดหน้าเว็บเรียบร้อย
+        document.addEventListener('DOMContentLoaded', renderAllCards);
+    </script>
+    <script>
+        (function () {
+            const btn = document.getElementById('support-btn');
+            const pupilLeft = document.getElementById('pupil-left');
+            const pupilRight = document.getElementById('pupil-right');
+
+            let sleepTimer = null;
+            const SLEEP_DELAY = 3000; // เวลาเมาส์นิ่ง (3000ms = 3 วินาที) แล้วจะหลับ
+
+            // ฟังก์ชั่นรีเซ็ตการหลับ (ปลุกให้ตื่น)
+            function wakeUp() {
+                btn.classList.remove('smiley-asleep-mode');
+                clearTimeout(sleepTimer);
+
+                // ตั้งเวลาถ้าไม่มีการขยับเมาส์จะหลับตา
+                sleepTimer = setTimeout(() => {
+                    btn.classList.add('smiley-asleep-mode');
+                }, SLEEP_DELAY);
+            }
+
+            // คำนวณตำแหน่งองศาตาดำให้มองตามเมาส์
+            document.addEventListener('mousemove', (e) => {
+                wakeUp();
+
+                if (!pupilLeft || !pupilRight || !btn) return;
+
+                const rect = btn.getBoundingClientRect();
+                // จุดศูนย์กลางของปุ่ม
+                const btnCenterX = rect.left + rect.width / 2;
+                const btnCenterY = rect.top + rect.height / 2;
+
+                // ระยะห่างระหว่างเมาส์กับปุ่ม
+                const deltaX = e.clientX - btnCenterX;
+                const deltaY = e.clientY - btnCenterY;
+                const angle = Math.atan2(deltaY, deltaX);
+
+                // ขอบเขตการกลอกตา (สูงสุด 3.5px)
+                const distance = Math.min(3.5, Math.hypot(deltaX, deltaY) / 30);
+                const pupilX = Math.cos(angle) * distance;
+                const pupilY = Math.sin(angle) * distance;
+
+                // ปรับตำแหน่งตาดำซ้าย-ขวา
+                pupilLeft.setAttribute('cx', 35 + pupilX);
+                pupilLeft.setAttribute('cy', 40 + pupilY);
+                pupilRight.setAttribute('cx', 65 + pupilX);
+                pupilRight.setAttribute('cy', 40 + pupilY);
+            });
+
+            // เริ่มต้นนับเวลาหลับตา
+            wakeUp();
+        })();
+    </script>
+</body>
+
+</html>

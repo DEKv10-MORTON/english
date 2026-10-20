@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Reported Speech</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Reported Speech (Direct-Indirect)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=ZGcZFLbqVuk" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Reported Speech
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-reported', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Reported Speech Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>Reported Speech (Direct to Indirect) Masterclass</h1>
+        <p>เรียนรู้วิธีการรายงานคำพูดของผู้อื่น โดยต้องเปลี่ยน Tense ถอยหลัง (Backshift Tense)
+          และเปลี่ยนสรรพนามให้สอดคล้องกับผู้พูด-ผู้ฟัง!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Backshift Tense -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-backward text-primary"></i> Backshift Tense (การถอยหลัง Tense)
+            </h3>
+            <span class="tag blue">กฎการเปลี่ยน</span>
+          </div>
+          <p class="theory-desc">เมื่อกริยานำ (Reporting Verb) เป็นรูปอดีต (e.g., said) Tense
+            ในประโยคคำพูดจะต้องถอยหลังไป 1 ระดับ</p>
+          <div class="formula-box">
+            <div class="formula-title">Present Simple &rarr; Past Simple</div>
+            <code>"I <b>like</b> music." &rarr; He said that he <b>liked</b> music.</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Present Continuous &rarr; Past Continuous</div>
+            <code>"I <b>am working</b>." &rarr; She said that she <b>was working</b>.</code>
+          </div>
+        </div>
+
+        <!-- Time & Pronoun Changes -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-clock text-primary"></i> Pronouns & Time Expressions</h3>
+            <span class="tag purple">การเปลี่ยนคำบอกเวลา</span>
+          </div>
+          <p class="theory-desc">นอกจาก Tense แล้ว สรรพนามและคำบอกเวลาต้องปรับให้เข้ากับมุมมองของผู้รายงานด้วย</p>
+          <div class="formula-box">
+            <div class="formula-title">Time Words Shift</div>
+            <div>• now &rarr; <b>then / at that moment</b></div>
+            <div>• today &rarr; <b>that day</b></div>
+            <div>• tomorrow &rarr; <b>the next day / the following day</b></div>
+            <div>• yesterday &rarr; <b>the day before / the previous day</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Reported Drill -->
+    <div id="tab-reported" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Reported Speech Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="rep-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="rep-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="rep-options-container"></div>
+
+        <div class="feedback-box hidden" id="rep-feedback">
+          <div class="feedback-header" id="rep-fb-title"></div>
+          <div class="feedback-text" id="rep-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="rep-next-btn" onclick="generateReportedQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

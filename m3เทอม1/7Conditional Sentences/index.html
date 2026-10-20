@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Conditional Sentences (If-Clause)</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-code-branch"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Conditional Sentences (If-Clause)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=TSedgq9Woeg" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี If-Clause
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-if', this)">
+        <i class="fa-solid fa-bolt"></i> 2. If-Clause Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>If-Clause Masterclass Cheat Sheet</h1>
+        <p>ทำความเข้าใจโครงสร้างประโยคเงื่อนไขทั้ง 4 ประเภทหลัก สังเกตความเชื่อมโยงระหว่าง Tense ใน If-Clause และ Main
+          Clause!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Type 0 & Type 1 -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-check-double text-primary"></i> Type 0 & Type 1</h3>
+            <span class="tag blue">ความจริง & เป็นไปได้ในอนาคต</span>
+          </div>
+          <p class="theory-desc">ใช้กับความจริงทางวิทยาศาสตร์ หรือสิ่งที่อาจจะเกิดขึ้นจริงในอนาคต</p>
+          <div class="formula-box">
+            <div class="formula-title">Type 0 (ความจริงสากล)</div>
+            <code>If + Present Simple, <b>Present Simple</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Type 1 (เป็นไปได้จริงในอนาคต)</div>
+            <code>If + Present Simple, <b>will + V.1</b></code>
+          </div>
+        </div>
+
+        <!-- Type 2 & Type 3 -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-clock-rotate-left text-primary"></i> Type 2 & Type 3</h3>
+            <span class="tag purple">สมมติปัจจุบัน & เสียดายอดีต</span>
+          </div>
+          <p class="theory-desc">ใช้สมมติในเรื่องที่ไม่จริงในปัจจุบัน หรือเสียดายเหตุการณ์ในอดีตที่แก้ไขไม่ได้</p>
+          <div class="formula-box">
+            <div class="formula-title">Type 2 (ตรงข้ามความจริงปัจจุบัน)</div>
+            <code>If + Past Simple (V.2 / were), <b>would + V.1</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Type 3 (ตรงข้ามความจริงในอดีต)</div>
+            <code>If + Past Perfect (had + V.3), <b>would have + V.3</b></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: If-Clause Drill -->
+    <div id="tab-if" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> If-Clause Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="if-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="if-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="if-options-container"></div>
+
+        <div class="feedback-box hidden" id="if-feedback">
+          <div class="feedback-header" id="if-fb-title"></div>
+          <div class="feedback-text" id="if-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="if-next-btn" onclick="generateIfQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

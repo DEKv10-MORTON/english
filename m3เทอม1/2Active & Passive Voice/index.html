@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Active & Passive Voice</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-hand-fist"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Active & Passive Voice Mastery</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=pPYSDrjM7cw" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Voice & Modals
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-passive', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Active & Passive Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>Active & Passive Voice Masterclass</h1>
+        <p>เรียนรู้การเปลี่ยนมุมมองประโยคจาก "ประธานเป็นผู้กระทำ" (Active) สู่ "ประธานเป็นผู้ถูกกระทำ" (Passive)
+          รวมถึงโครงสร้างพิเศษ Modal Passives!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Basic Passive -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-exchange-alt text-primary"></i> Basic Passive Voice</h3>
+            <span class="tag blue">ประธานถูกกระทำ</span>
+          </div>
+          <p class="theory-desc">เน้นที่ "ผู้ถูกกระทำ" หรือ "สิ่งของที่ได้รับผลกระทบ" โครงสร้างหลักคือ <b>Subject + Verb
+              to be + V.3</b></p>
+          <div class="formula-box">
+            <div class="formula-title">Present Simple Passive</div>
+            <code>Subject + <b>is/am/are + V.3</b></code>
+            <div><i>e.g. English <b>is spoken</b> worldwide.</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Past Simple Passive</div>
+            <code>Subject + <b>was/were + V.3</b></code>
+            <div><i>e.g. The car <b>was repaired</b> yesterday.</i></div>
+          </div>
+        </div>
+
+        <!-- Modal Passives -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-shield-alt text-primary"></i> Modal Passives</h3>
+            <span class="tag purple">กริยาช่วย + ถูกกระทำ</span>
+          </div>
+          <p class="theory-desc">เมื่อต้องใช้กริยาช่วยร่วมกับประโยคถูกกระทำ ให้ใช้โครงสร้าง <b>Modal + be + V.3</b> เสมอ
+          </p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code>Subject + <b>Modal (can/must/should/will) + be + V.3</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example</div>
+            <code>The rules <b>must be followed</b> by everyone.</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Passive Drill -->
+    <div id="tab-passive" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Active & Passive Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="pass-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="pass-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="pass-options-container"></div>
+
+        <div class="feedback-box hidden" id="pass-feedback">
+          <div class="feedback-header" id="pass-fb-title"></div>
+          <div class="feedback-text" id="pass-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="pass-next-btn" onclick="generatePassiveQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Perfect Tenses Mastery</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Perfect Tenses Mastery</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=qPJTJksrfts" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Perfect Tenses
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-perfect', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Perfect Tenses Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>Perfect Tenses Masterclass Cheat Sheet</h1>
+        <p>ทำความเข้าใจโครงสร้างและการใช้กริยา 3 (V.3) ร่วมกับ Have/Has/Had ในรูปแบบต่างๆ ทั้ง Present, Past และ Future
+          Perfect!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Present Perfect -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-clock text-primary"></i> Present Perfect Tense</h3>
+            <span class="tag blue">อดีตสู่ปัจจุบัน</span>
+          </div>
+          <p class="theory-desc">ใช้กับเหตุการณ์ที่เกิดขึ้นในอดีตและต่อเนื่องถึงปัจจุบัน หรือเพิ่งจบลงใหม่ๆ (มักมี
+            since, for, already, yet)</p>
+          <div class="formula-box">
+            <div class="formula-title">โครงสร้าง (Structure)</div>
+            <code>Subject + <b>have/has + V.3</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">ตัวอย่าง (Example)</div>
+            <code>I <b>have lived</b> here for 5 years.</code>
+          </div>
+        </div>
+
+        <!-- Past Perfect -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-history text-primary"></i> Past Perfect Tense</h3>
+            <span class="tag purple">อดีตซ้อนอดีต</span>
+          </div>
+          <p class="theory-desc">ใช้เล่าเหตุการณ์ที่เกิดขึ้นและสิ้นสุดลงก่อนอีกเหตุการณ์หนึ่งในอดีต (Before / After)</p>
+          <div class="formula-box">
+            <div class="formula-title">โครงสร้าง (Structure)</div>
+            <code>Subject + <b>had + V.3</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">ตัวอย่าง (Example)</div>
+            <code>She <b>had left</b> before I arrived.</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Perfect Tenses Drill -->
+    <div id="tab-perfect" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Perfect Tenses Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="perf-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="perf-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="perf-options-container"></div>
+
+        <div class="feedback-box hidden" id="perf-feedback">
+          <div class="feedback-header" id="perf-fb-title"></div>
+          <div class="feedback-text" id="perf-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="perf-next-btn" onclick="generatePerfectQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

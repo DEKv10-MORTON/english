@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Unit 1: Determiners & Quantifiers</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 1: Determiners & Quantifiers</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=Ch1ilKSOZWk" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Quantifiers
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-quant', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Quantifiers Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 1</span>
+        <h1>Determiners & Quantifiers Masterclass</h1>
+        <p>ทำความเข้าใจการใช้คำบอกปริมาณและการชี้เฉพาะเจาะจง เช่น each, every, neither, either, some, any, much, many
+          ให้ถูกต้องตามประเภทคำนาม!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Each vs Every -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-circle-check text-primary"></i> Each vs Every</h3>
+            <span class="tag blue">การชี้เฉพาะ</span>
+          </div>
+          <p class="theory-desc">ใช้กับคำนามนับได้เอกพจน์เสมอ แต่มีจุดเน้นต่างกันเล็กน้อย</p>
+          <div class="formula-box">
+            <div class="formula-title">Each (แต่ละ - มองเป็นรายบุคคล)</div>
+            <code><b>Each</b> student <b>has</b> a book.</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Every (ทุกๆ - มองเป็นกลุ่มรวมทั้งหมด)</div>
+            <code><b>Every</b> room <b>is</b> clean.</code>
+          </div>
+        </div>
+
+        <!-- Either, Neither, None -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid-solid fa-code-compare text-primary"></i> Either, Neither, None
+            </h3>
+            <span class="tag purple">การเลือก/ปฏิเสธ</span>
+          </div>
+          <p class="theory-desc">ใช้สำหรับการเลือกหรือกล่าวถึงจำนวนที่จำกัด</p>
+          <div class="formula-box">
+            <div class="formula-title">Either / Neither (อย่างใดอย่างหนึ่ง / ไม่ใช่ทั้งสอง)</div>
+            <div>• <b>Either</b> (อย่างใดอย่างหนึ่งจาก 2)</div>
+            <div>• <b>Neither</b> (ไม่ใช่ทั้ง 2 อย่าง)</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">None (ไม่มีเลย - ใช้กับจำนวน 3 ขึ้นไป)</div>
+            <code><b>None</b> of the students were late.</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Quantifiers Drill -->
+    <div id="tab-quant" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Quantifiers Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="quant-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="quant-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="quant-options-container"></div>
+
+        <div class="feedback-box hidden" id="quant-feedback">
+          <div class="feedback-header" id="quant-fb-title"></div>
+          <div class="feedback-text" id="quant-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="quant-next-btn" onclick="generateQuantifierQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
