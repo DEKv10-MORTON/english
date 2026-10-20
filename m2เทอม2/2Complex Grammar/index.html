@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.2 - Unit 2: Complex Grammar</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-code-branch"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.2 By : Dek Morton Studio </h2>
+          <p>เทอม 2 • Unit 2: Complex Grammar (Relative Clause & Passive Voice)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=ixGnIDFV7QQ" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+      <a href="https://www.youtube.com/watch?v=bkRcyKj6tzc" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+
+
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎีไวยากรณ์ (Theory)
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-relative', this)">
+        <i class="fa-solid fa-link"></i> 2. Relative Clauses (who/which/that)
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-passive', this)">
+        <i class="fa-solid fa-hand-fist"></i> 3. Active vs Passive Voice
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 4. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.2 เทอม 2</span>
+        <h1>Complex Grammar Cheat Sheet</h1>
+        <p>เรียนรู้การสร้างประโยคขยาย (Relative Clauses) และการเปลี่ยนมุมมองประโยคเน้นผู้ถูกกระทำ (Passive Voice)
+          ระดับพื้นฐานก่อนลุยแบบฝึกหัด!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Relative Clauses -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-link text-primary"></i> Relative Pronouns (คำเชื่อมประโยคขยาย)
+            </h3>
+            <span class="tag blue">Relative Clause</span>
+          </div>
+          <p class="theory-desc">ใช้ขยายคำนามที่อยู่ข้างหน้า เพื่อชี้เฉพาะเจาะจงว่าใครหรือสิ่งไหน</p>
+
+          <div class="formula-box">
+            <div class="formula-title">1. who (ใช้ขยาย "คน")</div>
+            <code>The man <b>who</b> lives next door is a doctor.</code>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">2. which (ใช้ขยาย "สิ่งของ / สัตว์")</div>
+            <code>The book <b>which</b> is on the table belongs to me.</code>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">3. that (ใช้ขยายได้ทั้ง "คน, สัตว์, สิ่งของ")</div>
+            <code>This is the car <b>that</b> I want to buy.</code>
+          </div>
+        </div>
+
+        <!-- Passive Voice -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-hand-fist text-primary"></i> Active vs Passive Voice
+              (ประธานถูกกระทำ)</h3>
+            <span class="tag purple">Voice</span>
+          </div>
+          <p class="theory-desc">เน้นว่า "ประธานเป็นผู้ถูกกระทำ" โครงสร้างสำคัญคือ <b>Subject + Verb to be + V.3</b></p>
+
+          <div class="formula-box">
+            <div class="formula-title">1. Present Simple Passive (เหตุการณ์ปัจจุบัน/ความจริง)</div>
+            <code>Subject + <b>is/am/are + V.3</b> (+ by Agent)</code>
+            <div><i>e.g. English <b>is spoken</b> all over the world.</i></div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">2. Past Simple Passive (เหตุการณ์ในอดีต)</div>
+            <code>Subject + <b>was/were + V.3</b> (+ by Agent)</code>
+            <div><i>e.g. The telephone <b>was invented</b> by Bell.</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Relative Clauses Generator -->
+    <div id="tab-relative" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-link"></i> Relative Clauses (who / which / that)</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="relative-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="relative-q-hint">คำชี้แนะจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="relative-options-container"></div>
+
+        <div class="feedback-box hidden" id="relative-feedback">
+          <div class="feedback-header" id="relative-fb-title"></div>
+          <div class="feedback-text" id="relative-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="relative-next-btn" onclick="generateRelativeQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Active vs Passive Voice Challenge -->
+    <div id="tab-passive" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-hand-fist"></i> Active vs Passive Voice</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="passive-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="passive-q-hint">บริบทประโยคจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="passive-options-container"></div>
+
+        <div class="feedback-box hidden" id="passive-feedback">
+          <div class="feedback-header" id="passive-fb-title"></div>
+          <div class="feedback-text" id="passive-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="passive-next-btn" onclick="generatePassiveQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>

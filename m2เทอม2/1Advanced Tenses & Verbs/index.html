@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.2 - Unit 1: Advanced Tenses & Modals</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.2 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 1: Advanced Tenses & Modals</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=RHMOjM_IMnQ" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=YHjqcY3joB0&t=33s" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี & กฎไวยากรณ์ (Theory)
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-past', this)">
+        <i class="fa-solid fa-clock-rotate-left"></i> 2. Past Continuous vs Simple
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-modal', this)">
+        <i class="fa-solid fa-key"></i> 3. Modal Verbs Challenge
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 4. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.2 เทอม 2</span>
+        <h1>Advanced Tenses & Modal Verbs Cheat Sheet</h1>
+        <p>ทบทวนโครงสร้างภาษาอังกฤษที่สำคัญสำหรับการเล่าเรื่องในอดีตและการบอกเงื่อนไข คำแนะนำ และความจำเป็น
+          ก่อนเริ่มทำแบบฝึกหัด!</p>
+      </div>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-timeline text-primary"></i> Past Simple vs Past Continuous</h3>
+            <span class="tag blue">Tenses</span>
+          </div>
+          <p class="theory-desc">ใช้เล่าเหตุการณ์ในอดีตที่เกิดขึ้นซ้อนกัน (Interrupted Actions)</p>
+
+          <div class="formula-box">
+            <div class="formula-title">1. Past Continuous (เหตุการณ์ที่กำลังทำในอดีต)</div>
+            <code>Subject + was/were + V.ing</code>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">2. Past Simple (เหตุการณ์ที่เข้ามาแทรก)</div>
+            <code>Subject + V.2</code>
+          </div>
+
+          <ul class="rule-list">
+            <li><b>While</b> + Past Continuous (กำลังเกิดขึ้น) &rarr; <i>While I was studying, the phone rang.</i></li>
+            <li><b>When</b> + Past Simple (เข้ามาแทรก) &rarr; <i>I was studying when the phone rang.</i></li>
+          </ul>
+        </div>
+
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-key text-primary"></i> Modal Verbs (กริยาช่วย)</h3>
+            <span class="tag purple">Modals</span>
+          </div>
+          <p class="theory-desc">กริยาช่วยที่ต้องตามด้วย <b>Verb Infinitive (V.1 ไม่เติม -s/-ed/-ing)</b> เสมอ!</p>
+
+          <div class="formula-box">
+            <div class="formula-title">Must / Have to (ต้องทำ / กฎระเบียบ)</div>
+            <div><b>Must:</b> จำเป็นมาก/ตั้งใจเอง (e.g. <i>You must wear a helmet.</i>)</div>
+            <div><b>Don't have to:</b> ไม่จำเป็นต้องทำ (เลือกทำหรือไม่ก็ได้)</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">Should / Shouldn't (ควรจะ / คำแนะนำ)</div>
+            <div>ใช้เสนอคำแนะนำ (e.g. <i>You should rest if you feel tired.</i>)</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">Can / Could (ความสามารถ / การขอร้อง)</div>
+            <div><b>Can:</b> บอกความสามารถในปัจจุบัน</div>
+            <div><b>Could:</b> บอกความสามารถในอดีต หรือขอร้องอย่างสุภาพ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Past Tenses Generator -->
+    <div id="tab-past" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-clock"></i> Past Continuous vs Past Simple</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="past-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="past-q-hint">คำชี้แนะจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="past-options-container"></div>
+
+        <div class="feedback-box hidden" id="past-feedback">
+          <div class="feedback-header" id="past-fb-title"></div>
+          <div class="feedback-text" id="past-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="past-next-btn" onclick="generatePastQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Modal Verbs Challenge -->
+    <div id="tab-modal" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-key"></i> Modal Verbs Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="modal-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="modal-q-hint">สถานการณ์สมมติจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="modal-options-container"></div>
+
+        <div class="feedback-box hidden" id="modal-feedback">
+          <div class="feedback-header" id="modal-fb-title"></div>
+          <div class="feedback-text" id="modal-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="modal-next-btn" onclick="generateModalQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>

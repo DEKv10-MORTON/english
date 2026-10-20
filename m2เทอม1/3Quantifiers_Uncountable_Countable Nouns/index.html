@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3: Quantifiers & Uncountable/Countable Nouns | Dek Morton Studio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Kanit', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#030305',
+            cardDark: '#080811',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* YouTube Glow Button Styles */
+    .yt-pulse-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ff0000;
+      color: white !important;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      animation: ytGlowPulse 2s infinite;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .yt-pulse-btn:hover {
+      background: #dc2626;
+      transform: scale(1.05);
+    }
+
+    @keyframes ytGlowPulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-brandDark text-white font-sans min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-purple-500/20 bg-[#080811]/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+          <i class="fa-solid fa-cubes text-white text-lg"></i>
+        </div>
+        <div>
+          <h1
+            class="text-lg md:text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
+            Unit 3: Quantifiers & Uncountable/Countable Nouns
+          </h1>
+          <p class="text-xs text-purple-300/70">คำบอกปริมาณ และคำนามนับได้/นับไม่ได้</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <span class="text-xs font-semibold text-purple-200">Dek Morton Studio</span>
+      </div>
+
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=aGmtH2NDoBs" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+
+    <!-- Tab Navigation -->
+    <div class="flex bg-[#080811] p-1.5 rounded-2xl border border-purple-500/20 mb-8 max-w-md mx-auto">
+      <button id="btn-tab-grammar" onclick="switchTab('grammar')"
+        class="flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40">
+        <i class="fa-solid fa-book-open"></i> สรุปเนื้อหา (Grammar)
+      </button>
+      <button id="btn-tab-quiz" onclick="switchTab('quiz')"
+        class="flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white">
+        <i class="fa-solid fa-pen-to-square"></i> แบบฝึกหัด (Drill)
+      </button>
+    </div>
+
+    <!-- TAB 1: Grammar Summary -->
+    <section id="tab-grammar" class="space-y-6">
+      <div class="bg-cardDark p-6 md:p-8 rounded-3xl border border-purple-500/20 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="px-3 py-1 rounded-md text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+            Grammar Key Points
+          </span>
+          <h2 class="text-xl font-bold text-purple-200">หลักการใช้ คำบอกปริมาณ (Quantifiers)</h2>
+        </div>
+
+        <!-- 3 Core Points Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+
+          <!-- Point 1: some / any -->
+          <div class="p-5 rounded-2xl bg-purple-950/30 border border-purple-500/20 space-y-2">
+            <div class="text-purple-400 font-bold text-base flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-300 text-xs flex items-center justify-center border border-purple-500/30">1</span>
+              some / any
+            </div>
+            <ul class="text-xs text-gray-300 space-y-1.5 leading-relaxed">
+              <li><b class="text-purple-300">some:</b> ใช้กับประโยค<b>บอกเล่า</b> หรือข้อเสนอ/ขอร้อง (เช่น <i>I have
+                  some milk.</i>)</li>
+              <li><b class="text-purple-300">any:</b> ใช้กับประโยค<b>ปฏิเสธ</b> และ <b>คำถาม</b> (เช่น <i>I don't have
+                  any water.</i>)</li>
+            </ul>
+          </div>
+
+          <!-- Point 2: much / many / a lot of -->
+          <div class="p-5 rounded-2xl bg-purple-950/30 border border-purple-500/20 space-y-2">
+            <div class="text-purple-400 font-bold text-base flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-300 text-xs flex items-center justify-center border border-purple-500/30">2</span>
+              much / many / a lot of
+            </div>
+            <ul class="text-xs text-gray-300 space-y-1.5 leading-relaxed">
+              <li><b class="text-purple-300">many:</b> ใช้กับคำนามนับได้พหูพจน์ (เช่น <i>many books</i>)</li>
+              <li><b class="text-purple-300">much:</b> ใช้กับคำนามนับไม่ได้ (เช่น <i>much sugar</i>)</li>
+              <li><b class="text-purple-300">a lot of:</b> ใช้ได้ทั้งนามนับได้และนับไม่ได้</li>
+            </ul>
+          </div>
+
+          <!-- Point 3: a few / a little -->
+          <div class="p-5 rounded-2xl bg-purple-950/30 border border-purple-500/20 space-y-2">
+            <div class="text-purple-400 font-bold text-base flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-300 text-xs flex items-center justify-center border border-purple-500/30">3</span>
+              a few / a little
+            </div>
+            <ul class="text-xs text-gray-300 space-y-1.5 leading-relaxed">
+              <li><b class="text-purple-300">a few:</b> แปลว่า "พอมีอยู่บ้าง" ใช้กับ<b>นามนับได้</b> (เช่น <i>a few
+                  apples</i>)</li>
+              <li><b class="text-purple-300">a little:</b> แปลว่า "พอมีอยู่บ้าง" ใช้กับ<b>นามนับไม่ได้</b> (เช่น <i>a
+                  little water</i>)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Action Button -->
+        <div class="mt-8 text-center">
+          <button onclick="switchTab('quiz')"
+            class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-purple-600/30 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
+            พร้อมแล้ว! ไปเริ่มทำแบบฝึกหัดกันเลย <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Interactive Quiz Generator -->
+    <section id="tab-quiz" class="hidden space-y-6">
+      <div class="bg-cardDark p-6 md:p-8 rounded-3xl border border-purple-500/20 shadow-2xl relative">
+
+        <!-- Score & Control Header -->
+        <div class="flex flex-wrap justify-between items-center gap-4 pb-6 border-b border-purple-500/10">
+          <div class="flex items-center gap-4">
+            <div class="bg-purple-950/60 px-4 py-2 rounded-2xl border border-purple-500/30 flex items-center gap-2">
+              <span class="text-xl">⭐</span>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-purple-300">Score</div>
+                <div id="score-val" class="text-lg font-bold text-white">0</div>
+              </div>
+            </div>
+            <div class="bg-purple-950/60 px-4 py-2 rounded-2xl border border-purple-500/30 flex items-center gap-2">
+              <span class="text-xl">🔥</span>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-purple-300">Streak</div>
+                <div id="streak-val" class="text-lg font-bold text-white">0</div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="generateQuestion()"
+            class="px-4 py-2 rounded-xl bg-purple-900/40 hover:bg-purple-800/60 text-purple-200 border border-purple-500/30 text-sm font-medium transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-dice text-purple-400"></i> สุ่มโจทย์ใหม่
+          </button>
+        </div>
+
+        <!-- Question Area -->
+        <div class="my-6">
+          <div id="category-badge"
+            class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-3">
+            Quantifiers Practice
+          </div>
+          <h3 id="question-text" class="text-lg md:text-xl font-medium text-white leading-relaxed">
+            กำลังสร้างโจทย์...
+          </h3>
+          <p id="question-hint" class="text-xs text-purple-300/70 mt-2">
+            เลือกคำบอกปริมาณที่ถูกต้องตามหลักไวยากรณ์
+          </p>
+        </div>
+
+        <!-- Options Container -->
+        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+          <!-- Dynamic Buttons Generate Here -->
+        </div>
+
+        <!-- Feedback Box -->
+        <div id="feedback-box" class="hidden p-4 rounded-2xl border transition-all duration-300 mb-6">
+          <div id="feedback-title" class="font-bold text-sm mb-1 flex items-center gap-2"></div>
+          <div id="feedback-desc" class="text-xs text-gray-300 leading-relaxed"></div>
+        </div>
+
+        <!-- Accordion Solution Step-by-Step -->
+        <div class="border border-purple-500/20 rounded-2xl overflow-hidden bg-black/30">
+          <button onclick="toggleAccordion()"
+            class="w-full p-4 text-left font-medium text-sm text-purple-300 hover:text-white flex justify-between items-center transition-colors">
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-amber-400"></i> 💡 ดูเฉลยและวิธีทำอย่างเป็นขั้นตอน
+            </span>
+            <i id="accordion-icon"
+              class="fa-solid fa-chevron-down text-purple-400 transition-transform duration-300"></i>
+          </button>
+          <div id="accordion-content"
+            class="hidden p-4 border-t border-purple-500/10 bg-purple-950/20 text-xs text-gray-300 space-y-2 leading-relaxed">
+            <!-- Dynamic Steps -->
+          </div>
+        </div>
+
+        <!-- Next Question Button -->
+        <div class="mt-6 flex justify-end">
+          <button id="btn-next" onclick="generateQuestion()"
+            class="hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-purple-600/30 hover:scale-105 transition-all">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-purple-500/10 bg-[#080811] py-6 text-center text-xs text-purple-300/60">
+    <div class="max-w-5xl mx-auto px-4">
+      Presented By <span class="text-purple-300 font-semibold">Dek Morton Studio</span> • Power of 10 Science Project
+    </div>
+  </footer>
+
+  <!-- System Logic Script -->
+  <script>
+    let score = 0;
+    let streak = 0;
+    let currentQuestionData = null;
+    let usedKeys = new Set();
+
+    // Word Pools for Dynamic Generator
+    const countableNouns = ['apples', 'books', 'students', 'pens', 'chairs', 'friends', 'coins'];
+    const uncountableNouns = ['water', 'milk', 'sugar', 'money', 'time', 'rice', 'coffee'];
+
+    function getRandomItem(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function shuffleArray(arr) {
+      return [...arr].sort(() => Math.random() - 0.5);
+    }
+
+    function switchTab(tab) {
+      const grammarTab = document.getElementById('tab-grammar');
+      const quizTab = document.getElementById('tab-quiz');
+      const btnGrammar = document.getElementById('btn-tab-grammar');
+      const btnQuiz = document.getElementById('btn-tab-quiz');
+
+      if (tab === 'grammar') {
+        grammarTab.classList.remove('hidden');
+        quizTab.classList.add('hidden');
+        btnGrammar.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40";
+        btnQuiz.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white";
+      } else {
+        quizTab.classList.remove('hidden');
+        grammarTab.classList.add('hidden');
+        btnQuiz.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40";
+        btnGrammar.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white";
+
+        if (!currentQuestionData) generateQuestion();
+      }
+    }
+
+    // Unlimited & Unique Question Generator
+    function generateQuestion() {
+      document.getElementById('feedback-box').classList.add('hidden');
+      document.getElementById('btn-next').classList.add('hidden');
+      document.getElementById('accordion-content').classList.add('hidden');
+      document.getElementById('accordion-icon').style.transform = 'rotate(0deg)';
+
+      let qType, noun, isCountable, questionKey;
+      let maxAttempts = 50;
+      let attempts = 0;
+
+      do {
+        // Types aligned with 3 key points from syllabus:
+        // 1 = some / any
+        // 2 = much / many
+        // 3 = a few / a little
+        qType = Math.floor(Math.random() * 3) + 1;
+        isCountable = Math.random() < 0.5;
+        noun = isCountable ? getRandomItem(countableNouns) : getRandomItem(uncountableNouns);
+
+        questionKey = `${qType}-${isCountable}-${noun}`;
+        attempts++;
+      } while (usedKeys.has(questionKey) && attempts < maxAttempts);
+
+      usedKeys.add(questionKey);
+
+      let qText = "", badgeText = "", correctAns = "", options = [], steps = [];
+
+      if (qType === 1) {
+        // Type 1: some vs any
+        badgeText = "Topic 1: some / any";
+        const isNegativeOrQuestion = Math.random() < 0.5;
+
+        if (isNegativeOrQuestion) {
+          const isQuestion = Math.random() < 0.5;
+          if (isQuestion) {
+            qText = `Do you have _______ ${noun}?`;
+            steps = [
+              `<b>ขั้นตอนที่ 1:</b> พิจารณาประเภทประโยคเป็น <b>ประโยคคำถาม</b>`,
+              `<b>ขั้นตอนที่ 2:</b> กฎไวยากรณ์ระบุว่า ในประโยคคำถามทั่วไป ให้ใช้ <b>"any"</b>`,
+              `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>any</b>')}`
+            ];
+          } else {
+            qText = `I don't have _______ ${noun}.`;
+            steps = [
+              `<b>ขั้นตอนที่ 1:</b> พิจารณาประเภทประโยคมีคำว่า <i>don't</i> ซึ่งเป็น <b>ประโยคปฏิเสธ</b>`,
+              `<b>ขั้นตอนที่ 2:</b> ในประโยคปฏิเสธ ให้ใช้ <b>"any"</b>`,
+              `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>any</b>')}`
+            ];
+          }
+          correctAns = "any";
+          options = ["any", "some", "a few", "a little"];
+        } else {
+          qText = `There is/are _______ ${noun} on the table.`;
+          correctAns = "some";
+          options = ["some", "any", "many", "much"];
+          steps = [
+            `<b>ขั้นตอนที่ 1:</b> พิจารณาประเภทประโยคเป็น <b>ประโยคบอกเล่า</b>`,
+            `<b>ขั้นตอนที่ 2:</b> ในประโยคบอกเล่า ให้ใช้ <b>"some"</b> เพื่อบอกว่ามีอยู่จำนวนหนึ่ง`,
+            `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>some</b>')}`
+          ];
+        }
+
+      } else if (qType === 2) {
+        // Type 2: much vs many
+        badgeText = "Topic 2: much / many";
+        if (isCountable) {
+          qText = `There aren't _______ ${noun} left in the room.`;
+          correctAns = "many";
+          options = ["many", "much", "a little", "any"];
+          steps = [
+            `<b>ขั้นตอนที่ 1:</b> พิจารณาคำนาม <i>"${noun}"</i> เป็น<b>คำนามนับได้พหูพจน์</b> (Countable Noun)`,
+            `<b>ขั้นตอนที่ 2:</b> คำบอกปริมาณที่ใช้กับคำนามนับได้พหูพจน์ คือ <b>"many"</b>`,
+            `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>many</b>')}`
+          ];
+        } else {
+          qText = `How _______ ${noun} do you need?`;
+          correctAns = "much";
+          options = ["much", "many", "a few", "some"];
+          steps = [
+            `<b>ขั้นตอนที่ 1:</b> พิจารณาคำนาม <i>"${noun}"</i> เป็น<b>คำนามนับไม่ได้</b> (Uncountable Noun)`,
+            `<b>ขั้นตอนที่ 2:</b> การถามปริมาณคำนามนับไม่ได้ ต้องใช้ <b>"How much"</b>`,
+            `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>much</b>')}`
+          ];
+        }
+
+      } else {
+        // Type 3: a few vs a little
+        badgeText = "Topic 3: a few / a little";
+        if (isCountable) {
+          qText = `He has _______ ${noun} in his bag. (พอมีอยู่บ้างเล็กน้อย)`;
+          correctAns = "a few";
+          options = ["a few", "a little", "much", "any"];
+          steps = [
+            `<b>ขั้นตอนที่ 1:</b> พิจารณาคำนาม <i>"${noun}"</i> เป็น<b>คำนามนับได้พหูพจน์</b>`,
+            `<b>ขั้นตอนที่ 2:</b> คำบอกปริมาณที่หมายถึง "พอมีอยู่บ้าง" สำหรับนามนับได้ คือ <b>"a few"</b>`,
+            `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>a few</b>')}`
+          ];
+        } else {
+          qText = `Please give me _______ ${noun}. (ขอเติมเล็กน้อย)`;
+          correctAns = "a little";
+          options = ["a little", "a few", "many", "any"];
+          steps = [
+            `<b>ขั้นตอนที่ 1:</b> พิจารณาคำนาม <i>"${noun}"</i> เป็น<b>คำนามนับไม่ได้</b>`,
+            `<b>ขั้นตอนที่ 2:</b> คำบอกปริมาณที่หมายถึง "พอมีอยู่บ้างเล็กน้อย" สำหรับนามนับไม่ได้ คือ <b>"a little"</b>`,
+            `<b>สรุปคำตอบ:</b> ${qText.replace('_______', '<b>a little</b>')}`
+          ];
+        }
+      }
+
+      currentQuestionData = {
+        correctAns: correctAns,
+        steps: steps
+      };
+
+      // Set UI Values
+      document.getElementById('category-badge').innerText = badgeText;
+      document.getElementById('question-text').innerText = qText;
+
+      // Render Accordion Steps
+      const accContent = document.getElementById('accordion-content');
+      accContent.innerHTML = steps.map(s => `<p>${s}</p>`).join('');
+
+      // Render Options
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      shuffleArray(options).forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = "p-4 rounded-2xl bg-black/40 border border-purple-500/20 hover:border-purple-500/60 hover:bg-purple-950/30 text-left font-mono text-sm text-purple-100 transition-all duration-200 flex items-center justify-between group";
+        btn.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-purple-500/40 group-hover:text-purple-400"></i>`;
+        btn.onclick = () => checkAnswer(opt, btn);
+        container.appendChild(btn);
+      });
+    }
+
+    // Answer Checker
+    function checkAnswer(selected, btnEl) {
+      const allBtns = document.querySelectorAll('#options-container button');
+      allBtns.forEach(b => b.disabled = true);
+
+      const fbBox = document.getElementById('feedback-box');
+      const fbTitle = document.getElementById('feedback-title');
+      const fbDesc = document.getElementById('feedback-desc');
+      const isCorrect = selected === currentQuestionData.correctAns;
+
+      allBtns.forEach(b => {
+        const spanText = b.querySelector('span').innerText;
+        if (spanText === currentQuestionData.correctAns) {
+          b.className = "p-4 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500 text-left font-mono text-sm text-emerald-200 flex items-center justify-between";
+          b.querySelector('i').className = "fa-solid fa-circle-check text-emerald-400";
+        }
+      });
+
+      if (isCorrect) {
+        score += 10;
+        streak++;
+        fbBox.className = "p-4 rounded-2xl border bg-emerald-950/30 border-emerald-500/30 text-emerald-300 mb-6";
+        fbTitle.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> Correct! ถูกต้องยอดเยี่ยม`;
+        fbDesc.innerText = `คุณเลือกคำบอกปริมาณได้ถูกต้องตามหลักไวยากรณ์`;
+      } else {
+        streak = 0;
+        btnEl.className = "p-4 rounded-2xl bg-rose-950/40 border-2 border-rose-500 text-left font-mono text-sm text-rose-200 flex items-center justify-between";
+        btnEl.querySelector('i').className = "fa-solid fa-circle-xmark text-rose-400";
+
+        fbBox.className = "p-4 rounded-2xl border bg-rose-950/30 border-rose-500/30 text-rose-300 mb-6";
+        fbTitle.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400"></i> Incorrect ยังไม่ถูกต้อง`;
+        fbDesc.innerText = `คำตอบที่ถูกต้องคือ: ${currentQuestionData.correctAns}`;
+      }
+
+      // Update Dashboard
+      document.getElementById('score-val').innerText = score;
+      document.getElementById('streak-val').innerText = streak;
+
+      fbBox.classList.remove('hidden');
+      document.getElementById('btn-next').classList.remove('hidden');
+    }
+
+    function toggleAccordion() {
+      const content = document.getElementById('accordion-content');
+      const icon = document.getElementById('accordion-icon');
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+
+</html>

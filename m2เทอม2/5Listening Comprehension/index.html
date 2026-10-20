@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.ต้น - Listening Comprehension</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-headphones"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.ต้น By : Dek Morton Studio</h2>
+          <p>Listening Practice • ฝึกการฟังจับใจความภาษาอังกฤษ</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-listening', this)">
+        <i class="fa-solid fa-circle-play"></i> Listening Challenge (ฟังจับใจความ)
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-tips', this)">
+        <i class="fa-solid fa-lightbulb"></i> เทคนิคการฟัง (Listening Tips)
+      </button>
+    </nav>
+
+    <!-- Tab 1: Listening Challenge -->
+    <div id="tab-listening" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">Listening Skill Building</span>
+        <h1>Listening Comprehension Drill</h1>
+        <p>กดปุ่มฟังเสียงบทสนทนาหรือเรื่องเล่า (สามารถกดฟังซ้ำได้) แล้วเลือกคำตอบ A B C D ที่ถูกต้องที่สุด!</p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-volume-high"></i> Listening Audio Player</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator</span>
+        </div>
+
+        <!-- Audio Player Controls -->
+        <div class="audio-control-box">
+          <button class="btn-audio-play" onclick="playCurrentAudio()">
+            <i class="fa-solid fa-volume-high" id="audio-icon"></i> <span id="audio-btn-text">กดเพื่อฟังเสียง (Click to
+              Listen)</span>
+          </button>
+          <div class="audio-status-tag" id="audio-status">พร้อมเล่นเสียง</div>
+        </div>
+
+        <!-- Transcript Toggle (ดู Script ซ่อน/แสดง) -->
+        <div class="transcript-box">
+          <button class="btn-toggle-transcript" onclick="toggleTranscript()">
+            <i class="fa-solid fa-eye"></i> <span id="toggle-script-text">แสดงสคริปต์เสียงอ่าน (Transcript)</span>
+          </button>
+          <div class="transcript-content hidden" id="transcript-text"></div>
+        </div>
+
+        <!-- Question Section -->
+        <div class="question-box">
+          <h3 class="question-title" id="quiz-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="quiz-q-hint">คำถามเกี่ยวกับการจับใจความ</div>
+        </div>
+
+        <!-- A B C D Options Grid -->
+        <div class="options-grid" id="quiz-options-container"></div>
+
+        <!-- Feedback Box -->
+        <div class="feedback-box hidden" id="quiz-feedback">
+          <div class="feedback-header" id="quiz-fb-title"></div>
+          <div class="feedback-text" id="quiz-fb-desc"></div>
+        </div>
+
+        <!-- Next Action Button -->
+        <div class="action-row">
+          <button class="btn-action hidden" id="quiz-next-btn" onclick="generateListeningQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Tips -->
+    <div id="tab-tips" class="tab-content">
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-ear-listen text-primary"></i> 1. เทคนิคการฟังจับใจความ</h3>
+            <span class="tag pink">Listening Skill</span>
+          </div>
+          <p class="theory-desc">หลักการทำข้อสอบการฟังภาษาอังกฤษระดับ ม.ต้น ให้ได้คะแนนดี:</p>
+
+          <div class="formula-box">
+            <ul>
+              <li><b>1. อ่านคำถามก่อนฟัง:</b> กวาดสายตาดูคำถามและตัวเลือก A B C D ก่อนกดฟัง
+                เพื่อรู้ว่าต้องโฟกัสหาข้อมูลอะไร (เช่น เวลา, สถานที่, หรือเหตุผล)</li>
+              <li><b>2. จับคำสำคัญ (Keywords):</b> ตั้งใจฟังคำศัพท์หลัก เช่น คำนาม, กริยา, ตัวเลข หรือคำบอกเวลา</li>
+              <li><b>3. อย่ากังวลถ้าแปลไม่ออกทุกคำ:</b> เน้นฟังเพื่อจับภาพรวมและความหมายหลักของเรื่อง</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

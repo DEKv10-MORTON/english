@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.2 เทอม 1 - Unit 1: Past Simple Tense</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601"
+    crossorigin="anonymous"></script>
+
+  <style>
+    /* YouTube Glow Button Styles */
+    .yt-pulse-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ff0000;
+      color: white !important;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      animation: ytGlowPulse 2s infinite;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .yt-pulse-btn:hover {
+      background: #dc2626;
+      transform: scale(1.05);
+    }
+
+    @keyframes ytGlowPulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.2 By : Dek Morton Studio</h2>
+          <p>Unit 1 • Past Simple Tense & Irregular Verbs</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=olgN7aADVAw" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <!-- สลับแท็บให้สรุปไวยากรณ์อยู่ทางซ้าย -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-grammar', this)">
+        <i class="fa-solid fa-book-open"></i> สรุปไวยากรณ์ (Grammar)
+      </button>
+      <button class="tab-btn" id="btn-tab-quiz" onclick="switchTab('tab-quiz', this)">
+        <i class="fa-solid fa-pen-to-square"></i> แบบฝึกหัด Past Simple
+      </button>
+    </nav>
+
+    <!-- Tab 1: Grammar Summary (แสดงเป็นหน้าเริ่มต้น) -->
+    <div id="tab-grammar" class="tab-content active">
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-book text-primary"></i> โครงสร้างประโยค Past Simple Tense</h3>
+            <span class="tag blue">Grammar Rules</span>
+          </div>
+          <p class="theory-desc">ใช้เล่าเหตุการณ์ที่เกิดขึ้นและจบลงแล้วในอดีต:</p>
+
+          <div class="formula-box">
+            <ul>
+              <li><b>1. ประโยคบอกเล่า:</b> Subject + V.2</li>
+              <li><b>2. ประโยคปฏิเสธ:</b> Subject + did not (didn't) + V.1 (กริยาช่องเดิม)</li>
+              <li><b>3. ประโยคคำถาม:</b> Did + Subject + V.1 ...?</li>
+            </ul>
+          </div>
+
+          <div class="grammar-tip">
+            <strong>📌 คำบอกเวลาที่พบบ่อย (Time Markers):</strong><br>
+            <code>yesterday</code> (เมื่อวาน), <code>last week/month/year</code> (เมื่อ...ที่แล้ว),
+            <code>two days ago</code> (...ที่แล้ว), <code>in 2020</code>
+          </div>
+        </div>
+
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-list-check text-primary"></i> กริยาช่อง 2 (V.2) ที่พบบ่อย</h3>
+            <span class="tag green">Irregular Verbs</span>
+          </div>
+
+          <table class="verb-table">
+            <thead>
+              <tr>
+                <th>V.1 (ปัจจุบัน)</th>
+                <th>V.2 (อดีต)</th>
+                <th>ความหมาย</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>go</td>
+                <td><b>went</b></td>
+                <td>ไป</td>
+              </tr>
+              <tr>
+                <td>see</td>
+                <td><b>saw</b></td>
+                <td>เห็น</td>
+              </tr>
+              <tr>
+                <td>buy</td>
+                <td><b>bought</b></td>
+                <td>ซื้อ</td>
+              </tr>
+              <tr>
+                <td>eat</td>
+                <td><b>ate</b></td>
+                <td>กิน</td>
+              </tr>
+              <tr>
+                <td>write</td>
+                <td><b>wrote</b></td>
+                <td>เขียน</td>
+              </tr>
+              <tr>
+                <td>take</td>
+                <td><b>took</b></td>
+                <td>เอา/นำไป</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ปุ่มส่งต่อไปยังแบบฝึกหัด -->
+      <div style="text-align: center; margin-top: 30px;">
+        <button class="btn-action" onclick="document.getElementById('btn-tab-quiz').click()">
+          พร้อมแล้ว! ไปเริ่มทำแบบฝึกหัดกันเลย <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab 2: Quiz Challenge -->
+    <div id="tab-quiz" class="tab-content">
+      <div class="banner-card">
+        <span class="badge-pill">Unit 1 • Past Simple Tense</span>
+        <h1>Past Simple Tense Drill</h1>
+        <p>ฝึกฝนการเปลี่ยน กริยาช่อง 2 (V.2) และการใช้ Past Simple Tense เล่าเรื่องราวในอดีตแบบสุ่มโจทย์ไม่ซ้ำ!</p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Dynamic Question Generator</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Practice</span>
+        </div>
+
+        <!-- Question Section -->
+        <div class="question-box">
+          <h3 class="question-title" id="quiz-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="quiz-q-hint">เลือกกริยาช่อง 2 (V.2) หรือโครงสร้างที่ถูกต้อง</div>
+        </div>
+
+        <!-- A B C D Options Grid -->
+        <div class="options-grid" id="quiz-options-container"></div>
+
+        <!-- Feedback Box -->
+        <div class="feedback-box hidden" id="quiz-feedback">
+          <div class="feedback-header" id="quiz-fb-title"></div>
+          <div class="feedback-text" id="quiz-fb-desc"></div>
+        </div>
+
+        <!-- Next Action Button -->
+        <div class="action-row">
+          <button class="btn-action hidden" id="quiz-next-btn" onclick="generatePastSimpleQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

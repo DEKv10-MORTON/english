@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.2 - Unit 2: Past Continuous Tense | Dek Morton Studio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Kanit', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#030305',
+            cardDark: '#080811',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* YouTube Glow Button Styles */
+    .yt-pulse-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ff0000;
+      color: white !important;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      animation: ytGlowPulse 2s infinite;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .yt-pulse-btn:hover {
+      background: #dc2626;
+      transform: scale(1.05);
+    }
+
+    @keyframes ytGlowPulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-brandDark text-white font-sans min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-purple-500/20 bg-[#080811]/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+          <i class="fa-solid fa-clock text-white text-lg"></i>
+        </div>
+        <div>
+          <h1
+            class="text-lg md:text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
+            Unit 2: Past Continuous Tense
+          </h1>
+          <p class="text-xs text-purple-300/70">เหตุการณ์ที่กำลังเกิดขึ้นในอดีต และการใช้ When / While</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <span class="text-xs font-semibold text-purple-200">Dek Morton Studio</span>
+      </div>
+
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=yu-flMCDORU" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+
+    <!-- Tab Navigation -->
+    <div class="flex bg-[#080811] p-1.5 rounded-2xl border border-purple-500/20 mb-8 max-w-md mx-auto">
+      <button id="btn-tab-grammar" onclick="switchTab('grammar')"
+        class="flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40">
+        <i class="fa-solid fa-book-open"></i> สรุปเนื้อหา (Grammar)
+      </button>
+      <button id="btn-tab-quiz" onclick="switchTab('quiz')"
+        class="flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white">
+        <i class="fa-solid fa-pen-to-square"></i> แบบฝึกหัด (Drill)
+      </button>
+    </div>
+
+    <!-- TAB 1: Grammar Summary (แสดงผลเป็นหน้าแรก) -->
+    <section id="tab-grammar" class="space-y-6">
+      <div class="bg-cardDark p-6 md:p-8 rounded-3xl border border-purple-500/20 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="px-3 py-1 rounded-md text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+            Grammar Rules
+          </span>
+          <h2 class="text-xl font-bold text-purple-200">โครงสร้าง Past Continuous Tense</h2>
+        </div>
+
+        <p class="text-gray-300 mb-6 leading-relaxed">
+          ใช้เล่าเหตุการณ์ที่<span class="text-purple-400 font-semibold">กำลังเกิดขึ้น ณ
+            ช่วงเวลาใดเวลาหนึ่งในอดีต</span> หรือเล่า 2 เหตุการณ์ที่เกิดขึ้นแทรกกันในอดีต
+        </p>
+
+        <!-- โครงสร้างหลัก -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="p-4 rounded-2xl bg-purple-950/30 border border-purple-500/20">
+            <div class="text-purple-400 font-semibold text-sm mb-1">1. ประโยคบอกเล่า</div>
+            <div class="text-white font-mono text-sm bg-black/40 p-2 rounded-lg border border-white/5">
+              Subject + was/were + V.ing
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-purple-950/30 border border-purple-500/20">
+            <div class="text-purple-400 font-semibold text-sm mb-1">2. ประโยคปฏิเสธ</div>
+            <div class="text-white font-mono text-sm bg-black/40 p-2 rounded-lg border border-white/5">
+              Subject + was/were + not + V.ing
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-purple-950/30 border border-purple-500/20">
+            <div class="text-purple-400 font-semibold text-sm mb-1">3. ประโยคคำถาม</div>
+            <div class="text-white font-mono text-sm bg-black/40 p-2 rounded-lg border border-white/5">
+              Was/Were + Subject + V.ing ...?
+            </div>
+          </div>
+        </div>
+
+        <!-- กฎการใช้ When & While -->
+        <div class="p-5 rounded-2xl bg-black/50 border border-purple-500/30 space-y-3">
+          <h3 class="text-purple-300 font-semibold flex items-center gap-2 text-base">
+            <i class="fa-solid fa-lightbulb text-amber-400"></i> เทคนิคสำคัญ: การใช้ When และ While แทรกเหตุการณ์
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 font-bold">•</span>
+              <div><b class="text-white">While + Past Continuous (กำลังเกิดอยู่/เกิดยาว):</b>
+                ใช้กับเหตุการณ์ที่กำลังดำเนินอยู่เรื่อยๆ (was/were + V.ing)</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 font-bold">•</span>
+              <div><b class="text-white">When + Past Simple (เข้ามาแทรก):</b> ใช้กับเหตุการณ์สั้นๆ
+                ที่เข้ามาแทรกจังหวะนั้นพอดี (V.2)</div>
+            </li>
+          </ul>
+          <div class="mt-2 p-3 bg-purple-950/40 rounded-xl text-xs text-purple-200 font-mono">
+            📌 ตัวอย่าง: While I <b>was sleeping</b> (เกิดยาว), the phone <b>rang</b> (เข้ามาแทรก).
+          </div>
+        </div>
+
+        <!-- ปุ่ม Action ส่งต่อไปทำแบบฝึกหัด -->
+        <div class="mt-8 text-center">
+          <button onclick="switchTab('quiz')"
+            class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-purple-600/30 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
+            พร้อมแล้ว! ไปเริ่มทำแบบฝึกหัดกันเลย <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Interactive Quiz (สุ่มโจทย์ไม่จำกัด) -->
+    <section id="tab-quiz" class="hidden space-y-6">
+      <div class="bg-cardDark p-6 md:p-8 rounded-3xl border border-purple-500/20 shadow-2xl relative">
+
+        <!-- Dashboard Score / Control Header -->
+        <div class="flex flex-wrap justify-between items-center gap-4 pb-6 border-b border-purple-500/10">
+          <div class="flex items-center gap-4">
+            <div class="bg-purple-950/60 px-4 py-2 rounded-2xl border border-purple-500/30 flex items-center gap-2">
+              <span class="text-xl">⭐</span>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-purple-300">Score</div>
+                <div id="score-val" class="text-lg font-bold text-white">0</div>
+              </div>
+            </div>
+            <div class="bg-purple-950/60 px-4 py-2 rounded-2xl border border-purple-500/30 flex items-center gap-2">
+              <span class="text-xl">🔥</span>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-purple-300">Streak</div>
+                <div id="streak-val" class="text-lg font-bold text-white">0</div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="generateQuestion()"
+            class="px-4 py-2 rounded-xl bg-purple-900/40 hover:bg-purple-800/60 text-purple-200 border border-purple-500/30 text-sm font-medium transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-dice text-purple-400"></i> สุ่มโจทย์ใหม่
+          </button>
+        </div>
+
+        <!-- Question Title -->
+        <div class="my-6">
+          <div
+            class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20 mb-3">
+            Dynamic Unlimited Drill
+          </div>
+          <h3 id="question-text" class="text-lg md:text-xl font-medium text-white leading-relaxed">
+            กำลังสร้างโจทย์...
+          </h3>
+          <p id="question-hint" class="text-xs text-purple-300/70 mt-2">
+            เลือกคำตอบที่ถูกต้องตามหลักโครงสร้าง Past Continuous Tense
+          </p>
+        </div>
+
+        <!-- Options Grid -->
+        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+          <!-- Dynamic Buttons Generate Here -->
+        </div>
+
+        <!-- Interactive Feedback -->
+        <div id="feedback-box" class="hidden p-4 rounded-2xl border transition-all duration-300 mb-6">
+          <div id="feedback-title" class="font-bold text-sm mb-1 flex items-center gap-2"></div>
+          <div id="feedback-desc" class="text-xs text-gray-300 leading-relaxed"></div>
+        </div>
+
+        <!-- Accordion Solution Step-by-Step -->
+        <div class="border border-purple-500/20 rounded-2xl overflow-hidden bg-black/30">
+          <button onclick="toggleAccordion()"
+            class="w-full p-4 text-left font-medium text-sm text-purple-300 hover:text-white flex justify-between items-center transition-colors">
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-amber-400"></i> 💡 ดูเฉลยและวิธีทำอย่างเป็นขั้นตอน
+            </span>
+            <i id="accordion-icon"
+              class="fa-solid fa-chevron-down text-purple-400 transition-transform duration-300"></i>
+          </button>
+          <div id="accordion-content"
+            class="hidden p-4 border-t border-purple-500/10 bg-purple-950/20 text-xs text-gray-300 space-y-2 leading-relaxed">
+            <!-- Step-by-step logic text -->
+          </div>
+        </div>
+
+        <!-- Next Question Action Button -->
+        <div class="mt-6 flex justify-end">
+          <button id="btn-next" onclick="generateQuestion()"
+            class="hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-purple-600/30 hover:scale-105 transition-all">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-purple-500/10 bg-[#080811] py-6 text-center text-xs text-purple-300/60">
+    <div class="max-w-5xl mx-auto px-4">
+      Presented By <span class="text-purple-300 font-semibold">Dek Morton Studio</span> • Power of 10 Science Project
+    </div>
+  </footer>
+
+  <!-- Script Logic -->
+  <script>
+    // System Global States
+    let score = 0;
+    let streak = 0;
+    let currentQuestionData = null;
+    let usedKeys = new Set(); // บันทึกข้อที่สุ่มออกไปเพื่อป้องกันโจทย์ซ้ำ
+
+    // Data Pools ( Dynamic Combination Generator )
+    const subjects = [
+      { name: 'I', wasWere: 'was', singular: true },
+      { name: 'He', wasWere: 'was', singular: true },
+      { name: 'She', wasWere: 'was', singular: true },
+      { name: 'My brother', wasWere: 'was', singular: true },
+      { name: 'They', wasWere: 'were', singular: false },
+      { name: 'We', wasWere: 'were', singular: false },
+      { name: 'The students', wasWere: 'were', singular: false }
+    ];
+
+    const actions = [
+      { vBase: 'sleep', vIng: 'sleeping', v2: 'slept', th: 'นอนหลับ', obj: 'in the room' },
+      { vBase: 'cook', vIng: 'cooking', v2: 'cooked', th: 'ทำอาหาร', obj: 'dinner' },
+      { vBase: 'read', vIng: 'reading', v2: 'read', th: 'อ่านหนังสือ', obj: 'a comic book' },
+      { vBase: 'watch', vIng: 'watching', v2: 'watched', th: 'ดู', obj: 'TV' },
+      { vBase: 'play', vIng: 'playing', v2: 'played', th: 'เล่น', obj: 'games' },
+      { vBase: 'study', vIng: 'studying', v2: 'studied', th: 'เรียน', obj: 'English' }
+    ];
+
+    const interruptActions = [
+      { vBase: 'ring', v2: 'rang', th: 'เสียงโทรศัพท์ดังขึ้น', obj: 'the phone' },
+      { vBase: 'arrive', v2: 'arrived', th: 'แม่มาถึงบ้าน', obj: 'mom' },
+      { vBase: 'knock', v2: 'knocked', th: 'มีคนเคาะประตู', obj: 'someone' },
+      { vBase: 'start', v2: 'started', th: 'ฝนเริ่มตก', obj: 'it' }
+    ];
+
+    const timeAtPoints = ['at 8 o\'clock yesterday', 'at 10 PM last night', 'at this time yesterday'];
+
+    // Helper Functions
+    function getRandomItem(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function shuffleArray(arr) {
+      return [...arr].sort(() => Math.random() - 0.5);
+    }
+
+    function switchTab(tab) {
+      const grammarTab = document.getElementById('tab-grammar');
+      const quizTab = document.getElementById('tab-quiz');
+      const btnGrammar = document.getElementById('btn-tab-grammar');
+      const btnQuiz = document.getElementById('btn-tab-quiz');
+
+      if (tab === 'grammar') {
+        grammarTab.classList.remove('hidden');
+        quizTab.classList.add('hidden');
+        btnGrammar.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40";
+        btnQuiz.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white";
+      } else {
+        quizTab.classList.remove('hidden');
+        grammarTab.classList.add('hidden');
+        btnQuiz.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-900/40";
+        btnGrammar.className = "flex-1 py-2.5 px-4 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 text-purple-300 hover:text-white";
+
+        if (!currentQuestionData) generateQuestion();
+      }
+    }
+
+    // Unlimited & Unique Question Generator
+    function generateQuestion() {
+      // Reset UI States
+      document.getElementById('feedback-box').classList.add('hidden');
+      document.getElementById('btn-next').classList.add('hidden');
+      document.getElementById('accordion-content').classList.add('hidden');
+      document.getElementById('accordion-icon').style.transform = 'rotate(0deg)';
+
+      let subj, act, inter, timePoint, qType, questionKey;
+      let maxAttempts = 50;
+      let attempts = 0;
+
+      // สุ่มวนจนกว่าจะไม่ซ้ำข้อเดิม
+      do {
+        subj = getRandomItem(subjects);
+        act = getRandomItem(actions);
+        inter = getRandomItem(interruptActions);
+        timePoint = getRandomItem(timeAtPoints);
+        qType = getRandomItem(['singleAtTime', 'whileWhenCombination', 'negativeForm']);
+
+        questionKey = `${qType}-${subj.name}-${act.vBase}-${inter.vBase}`;
+        attempts++;
+      } while (usedKeys.has(questionKey) && attempts < maxAttempts);
+
+      usedKeys.add(questionKey);
+
+      let qText = "", hintText = "", correctAns = "", options = [], stepExplain = [];
+
+      if (qType === 'singleAtTime') {
+        // แบบที่ 1: กำหนดเวลาเฉพาะเจาะจงในอดีต
+        qText = `${subj.name} _______ ${act.obj} ${timePoint}.`;
+        hintText = `เลือกรูปกริยา Past Continuous ให้ถูกต้องตามประธาน "${subj.name}"`;
+        correctAns = `${subj.wasWere} ${act.vIng}`;
+        options = [
+          `${subj.wasWere} ${act.vIng}`,
+          `${subj.wasWere === 'was' ? 'were' : 'was'} ${act.vIng}`,
+          `${act.v2}`,
+          `is ${act.vIng}`
+        ];
+
+        stepExplain = [
+          `<b>ขั้นตอนที่ 1:</b> สังเกตคำบอกเวลา <i>"${timePoint}"</i> เป็นการระบุเวลาเฉพาะในอดีต จึงต้องใช้ Past Continuous Tense (was/were + V.ing)`,
+          `<b>ขั้นตอนที่ 2:</b> พิจารณาประธาน <b>"${subj.name}"</b> ซึ่งต้องใช้กริยาช่วย <b>"${subj.wasWere}"</b>`,
+          `<b>ขั้นตอนที่ 3:</b> เปลี่ยนกริยา <i>"${act.vBase}"</i> ให้เป็นรูป V.ing ได้เป็น <b>"${act.vIng}"</b>`,
+          `<b>สรุปคำตอบ:</b> ${correctAns}`
+        ];
+
+      } else if (qType === 'whileWhenCombination') {
+        // แบบที่ 2: เหตุการณ์แทรกซ้อน (While + Past Continuous)
+        qText = `While ${subj.name} _______ ${act.obj}, ${inter.obj} ${inter.v2}.`;
+        hintText = `สังเกตคำว่า While (หลัง While ต้องเป็นเหตุการณ์ที่กำลังดำเนินอยู่)`;
+        correctAns = `${subj.wasWere} ${act.vIng}`;
+        options = [
+          `${subj.wasWere} ${act.vIng}`,
+          `${act.v2}`,
+          `${subj.wasWere === 'was' ? 'were' : 'was'} ${act.vIng}`,
+          `will ${act.vBase}`
+        ];
+
+        stepExplain = [
+          `<b>ขั้นตอนที่ 1:</b> สังเกตประโยคมีคำเชื่อม <b>"While"</b> นำหน้า ประโยคตามหลัง While จะต้องเป็นเหตุการณ์ที่กำลังดำเนินอยู่ (Past Continuous: was/were + V.ing)`,
+          `<b>ขั้นตอนที่ 2:</b> ประธาน <b>"${subj.name}"</b> สอดคล้องกับกริยาช่วย <b>"${subj.wasWere}"</b>`,
+          `<b>ขั้นตอนที่ 3:</b> ประโยคส่วนหลัง (${inter.obj} ${inter.v2}) เป็นเหตุการณ์สั้นที่เข้ามาแทรก จึงใช้ Past Simple (V.2)`,
+          `<b>สรุปคำตอบ:</b> ${correctAns}`
+        ];
+
+      } else {
+        // แบบที่ 3: ประโยคปฏิเสธ (wasn't / weren't + V.ing)
+        const negWasWere = subj.wasWere === 'was' ? "wasn't" : "weren't";
+        qText = `${subj.name} _______ ${act.obj} ${timePoint}. (ปฏิเสธ)`;
+        hintText = `เลือกรูปปฏิเสธของ Past Continuous Tense`;
+        correctAns = `${negWasWere} ${act.vIng}`;
+        options = [
+          `${negWasWere} ${act.vIng}`,
+          `didn't ${act.vBase}`,
+          `${subj.wasWere} not ${act.vBase}`,
+          `don't ${act.vIng}`
+        ];
+
+        stepExplain = [
+          `<b>ขั้นตอนที่ 1:</b> โจทย์ต้องการประโยคปฏิเสธของ Past Continuous Tense`,
+          `<b>ขั้นตอนที่ 2:</b> โครงสร้างปฏิเสธคือ <b>was/were + not + V.ing</b>`,
+          `<b>ขั้นตอนที่ 3:</b> ประธาน <b>"${subj.name}"</b> ใช้ <b>"${negWasWere}"</b> ร่วมกับ <b>"${act.vIng}"</b>`,
+          `<b>สรุปคำตอบ:</b> ${correctAns}`
+        ];
+      }
+
+      currentQuestionData = {
+        correctAns: correctAns,
+        stepExplain: stepExplain
+      };
+
+      // Set UI Values
+      document.getElementById('question-text').innerText = qText;
+      document.getElementById('question-hint').innerText = hintText;
+
+      // Render Step Accordion
+      const accContent = document.getElementById('accordion-content');
+      accContent.innerHTML = stepExplain.map(step => `<p>${step}</p>`).join('');
+
+      // Render Options
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      shuffleArray(options).forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = "p-4 rounded-2xl bg-black/40 border border-purple-500/20 hover:border-purple-500/60 hover:bg-purple-950/30 text-left font-mono text-sm text-purple-100 transition-all duration-200 flex items-center justify-between group";
+        btn.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-purple-500/40 group-hover:text-purple-400"></i>`;
+        btn.onclick = () => checkAnswer(opt, btn);
+        container.appendChild(btn);
+      });
+    }
+
+    // Answer Checker & Feedback Handler
+    function checkAnswer(selected, btnEl) {
+      const allBtns = document.querySelectorAll('#options-container button');
+      allBtns.forEach(b => b.disabled = true);
+
+      const fbBox = document.getElementById('feedback-box');
+      const fbTitle = document.getElementById('feedback-title');
+      const fbDesc = document.getElementById('feedback-desc');
+      const isCorrect = selected === currentQuestionData.correctAns;
+
+      allBtns.forEach(b => {
+        const spanText = b.querySelector('span').innerText;
+        if (spanText === currentQuestionData.correctAns) {
+          b.className = "p-4 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500 text-left font-mono text-sm text-emerald-200 flex items-center justify-between";
+          b.querySelector('i').className = "fa-solid fa-circle-check text-emerald-400";
+        }
+      });
+
+      if (isCorrect) {
+        score += 10;
+        streak++;
+        fbBox.className = "p-4 rounded-2xl border bg-emerald-950/30 border-emerald-500/30 text-emerald-300 mb-6";
+        fbTitle.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> ถูกต้องยอดเยี่ยม!`;
+        fbDesc.innerText = `คุณตอบถูกตามหลักโครงสร้างแกรมมาร์ Past Continuous Tense`;
+      } else {
+        streak = 0;
+        btnEl.className = "p-4 rounded-2xl bg-rose-950/40 border-2 border-rose-500 text-left font-mono text-sm text-rose-200 flex items-center justify-between";
+        btnEl.querySelector('i').className = "fa-solid fa-circle-xmark text-rose-400";
+
+        fbBox.className = "p-4 rounded-2xl border bg-rose-950/30 border-rose-500/30 text-rose-300 mb-6";
+        fbTitle.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400"></i> ยังไม่ถูกต้อง`;
+        fbDesc.innerText = `คำตอบที่ถูกต้องคือ: ${currentQuestionData.correctAns}`;
+      }
+
+      // Update Dashboard Stats
+      document.getElementById('score-val').innerText = score;
+      document.getElementById('streak-val').innerText = streak;
+
+      fbBox.classList.remove('hidden');
+      document.getElementById('btn-next').classList.remove('hidden');
+    }
+
+    // Toggle Accordion Solution
+    function toggleAccordion() {
+      const content = document.getElementById('accordion-content');
+      const icon = document.getElementById('accordion-icon');
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนวข้อสอบภาษาอังกฤษ ม.2 เทอม 2 - Dek Morton Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Kanit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', 'Inter', sans-serif;
+            background-color: #030305;
+            color: #f3f4f6;
+        }
+
+        .font-english {
+            font-family: 'Inter', 'Kanit', sans-serif;
+        }
+
+        /* Glassmorphism custom blur */
+        .glass-panel {
+            background: rgba(8, 8, 17, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .option-card:hover {
+            border-color: rgba(168, 85, 247, 0.5);
+            background: rgba(168, 85, 247, 0.08);
+        }
+
+        /* YouTube Glow Pulse Animation */
+        .yt-pulse-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #ff0000;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            animation: ytGlowPulse 2s infinite;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .yt-pulse-btn:hover {
+            background: #dc2626;
+            transform: scale(1.05);
+        }
+
+        @keyframes ytGlowPulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #030305;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2e1065;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #581c87;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-purple-500/20 px-4 py-3 sm:px-8">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div>
+                <h1
+                    class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 bg-clip-text text-transparent">
+                    แนวข้อสอบรวม ม.2 เทอม 2
+                </h1>
+                <p class="text-xs sm:text-sm text-purple-300/80 font-english">
+                    Grade 8 English Comprehensive Practice (Term 2)
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <!-- YouTube Pulse Button -->
+                <a href="https://www.youtube.com/watch?v=HwdPGwH1QuI&t=11s" target="_blank" class="yt-pulse-btn"
+                    title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+                    <i class="fa-brands fa-youtube text-lg"></i>
+                    <span>ติวเตอร์</span>
+                </a>
+                <span
+                    class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-900/60 to-indigo-900/60 text-purple-300 border border-purple-500/30 shadow-lg shadow-purple-950/50">
+                    ✨ DEK MORTON STUDIO
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-grow flex flex-col gap-6">
+
+        <!-- SCOREBOARD & STATS -->
+        <section class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div
+                class="bg-[#080811] p-3 sm:p-4 rounded-xl border border-purple-500/20 flex flex-col items-center justify-center">
+                <span class="text-xs text-purple-300/70 font-medium">ทำไปแล้ว</span>
+                <span id="stat-total" class="text-xl sm:text-2xl font-bold text-white font-english">0</span>
+            </div>
+            <div
+                class="bg-[#080811] p-3 sm:p-4 rounded-xl border border-emerald-500/20 flex flex-col items-center justify-center">
+                <span class="text-xs text-emerald-400/70 font-medium">ตอบถูก</span>
+                <span id="stat-correct" class="text-xl sm:text-2xl font-bold text-emerald-400 font-english">0</span>
+            </div>
+            <div
+                class="bg-[#080811] p-3 sm:p-4 rounded-xl border border-rose-500/20 flex flex-col items-center justify-center">
+                <span class="text-xs text-rose-400/70 font-medium">ตอบผิด</span>
+                <span id="stat-wrong" class="text-xl sm:text-2xl font-bold text-rose-400 font-english">0</span>
+            </div>
+            <div
+                class="bg-[#080811] p-3 sm:p-4 rounded-xl border border-indigo-500/20 flex flex-col items-center justify-center">
+                <span class="text-xs text-indigo-300/70 font-medium">ความแม่นยำ</span>
+                <span id="stat-accuracy" class="text-xl sm:text-2xl font-bold text-indigo-300 font-english">0%</span>
+            </div>
+        </section>
+
+        <!-- TOPIC FILTER TABS -->
+        <section class="flex flex-wrap gap-2 justify-center">
+            <button onclick="setTopic('all')" id="tab-all"
+                class="topic-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-purple-600 text-white border border-purple-400">
+                รวมทุกหมวด (Mix)
+            </button>
+            <button onclick="setTopic('tenses')" id="tab-tenses"
+                class="topic-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-[#080811] text-purple-300 border border-purple-500/20 hover:border-purple-500/50">
+                1. Tenses & Modals
+            </button>
+            <button onclick="setTopic('grammar')" id="tab-grammar"
+                class="topic-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-[#080811] text-purple-300 border border-purple-500/20 hover:border-purple-500/50">
+                2. Relative Clause & Passive
+            </button>
+            <button onclick="setTopic('conditionals')" id="tab-conditionals"
+                class="topic-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-[#080811] text-purple-300 border border-purple-500/20 hover:border-purple-500/50">
+                3. Conditionals & Wishes
+            </button>
+            <button onclick="setTopic('reported')" id="tab-reported"
+                class="topic-tab px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-[#080811] text-purple-300 border border-purple-500/20 hover:border-purple-500/50">
+                4. Reported Speech
+            </button>
+        </section>
+
+        <!-- QUESTION CARD -->
+        <div
+            class="bg-[#080811] rounded-2xl border border-purple-500/20 p-5 sm:p-8 shadow-2xl relative overflow-hidden flex flex-col gap-6">
+
+            <!-- Category Badge & Q-Number -->
+            <div class="flex justify-between items-center border-b border-purple-500/10 pb-4">
+                <span id="topic-badge"
+                    class="px-3 py-1 rounded-md text-xs font-semibold bg-purple-950/80 text-purple-300 border border-purple-500/30 font-english">
+                    Category Loading...
+                </span>
+                <span id="q-count-badge" class="text-xs text-purple-300/60 font-english">
+                    Unique Key: <span id="unique-key-display" class="font-mono text-purple-400">#000</span>
+                </span>
+            </div>
+
+            <!-- Question Statement -->
+            <div class="space-y-3">
+                <h2 id="question-text"
+                    class="text-lg sm:text-2xl font-semibold text-white leading-relaxed font-english">
+                    Loading Question...
+                </h2>
+                <p id="question-hint" class="text-xs sm:text-sm text-purple-300/70 italic">
+                    คำสั่ง: เลือกคำตอบที่ถูกต้องที่สุด
+                </p>
+            </div>
+
+            <!-- Options Grid -->
+            <div id="options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <!-- Options injected dynamically -->
+            </div>
+
+            <!-- Submit / Action Button -->
+            <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-purple-500/10">
+                <button id="btn-next" onclick="generateQuestion()"
+                    class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2">
+                    <span>สุ่มโจทย์ข้อต่อไป</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- STEP-BY-STEP EXPLANATION ACCORDION -->
+            <div id="explanation-box"
+                class="hidden mt-2 p-4 sm:p-5 rounded-xl bg-purple-950/30 border border-purple-500/30 space-y-3 animate-fade-in">
+                <div class="flex items-center gap-2 text-purple-300 font-semibold text-sm">
+                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>เฉลยและคำอธิบายอย่างละเอียด (Step-by-Step)</span>
+                </div>
+                <div id="explanation-text" class="text-sm text-purple-200/90 leading-relaxed space-y-2">
+                    <!-- Detailed explanation injected here -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-purple-500/20 bg-[#030305] py-4 text-center px-4">
+        <p class="text-xs text-purple-300/60 font-medium">
+            Presented By Dek Morton Studio • Power of 10 Science Project
+        </p>
+    </footer>
+
+    <!-- DYNAMIC QUESTION GENERATOR ENGINE SCRIPT -->
+    <script>
+        const generatedKeysHistory = new Set();
+        let currentTopic = 'all';
+        let currentQuestionObj = null;
+        let isAnswered = false;
+
+        let stats = { total: 0, correct: 0, wrong: 0 };
+
+        const subjects = [
+            { en: "Tom", gender: "m", pronoun: "he", pos: "his" },
+            { en: "Sarah", gender: "f", pronoun: "she", pos: "her" },
+            { en: "The students", gender: "p", pronoun: "they", pos: "their" },
+            { en: "My brother", gender: "m", pronoun: "he", pos: "his" },
+            { en: "The teacher", gender: "m", pronoun: "he", pos: "his" },
+            { en: "Lisa and Jane", gender: "p", pronoun: "they", pos: "their" },
+            { en: "The doctor", gender: "f", pronoun: "she", pos: "her" },
+            { en: "Our neighbors", gender: "p", pronoun: "they", pos: "their" }
+        ];
+
+        const actionsPastContinuous = [
+            { action: "read a book", pastConSingular: "was reading a book", pastConPlural: "were reading books" },
+            { action: "watch TV", pastConSingular: "was watching TV", pastConPlural: "were watching TV" },
+            { action: "cook dinner", pastConSingular: "was cooking dinner", pastConPlural: "were cooking dinner" },
+            { action: "play games", pastConSingular: "was playing games", pastConPlural: "were playing games" },
+            { action: "study English", pastConSingular: "was studying English", pastConPlural: "were studying English" },
+            { action: "clean the room", pastConSingular: "was cleaning the room", pastConPlural: "was cleaning the room" }
+        ];
+
+        const interruptingActions = [
+            { text: "the phone rang", meaning: "โทรศัพท์ดังขึ้น" },
+            { text: "the lights went out", meaning: "ไฟดับลง" },
+            { text: "it started to rain", meaning: "ฝนเริ่มตก" },
+            { text: "someone knocked on the door", meaning: "มีคนเคาะประตู" },
+            { text: "the teacher came in", meaning: "คุณครูเดินเข้ามา" }
+        ];
+
+        const modalContexts = [
+            { text: "You _______ wear a helmet while riding a motorcycle. It is the traffic law.", ans: "must", opts: ["must", "should", "can", "could"], explain: "ใช้ **must** เพราะเป็นกฎหมาย/ข้อบังคับเคร่งครัดที่ต้องปฏิบัติตาม" },
+            { text: "It is very cold outside. You _______ wear a jacket.", ans: "should", opts: ["should", "must", "can", "could"], explain: "ใช้ **should** เพราะเป็นการให้คำแนะนำ (ควรจะทำ)" },
+            { text: "When he was five years old, he _______ swim very fast.", ans: "could", opts: ["could", "can", "must", "should"], explain: "ใช้ **could** เพราะพูดถึงความสามารถในอดีต (เมื่ออายุ 5 ขวบ)" },
+            { text: "_______ you please pass me the salt, please?", ans: "Could", opts: ["Could", "Must", "Should", "Shall"], explain: "ใช้ **Could** ในการขอร้องอย่างสุภาพ" },
+            { text: "Look at the sign! You _______ park your car here. It is prohibited.", ans: "mustn't", opts: ["mustn't", "shouldn't", "couldn't", "can"], explain: "ใช้ **mustn't** (ห้าม) เพราะมีป้ายห้ามอย่างเด็ดขาด" }
+        ];
+
+        const relativeObjects = [
+            { item: "the book", type: "thing", rel: "which" },
+            { item: "the car", type: "thing", rel: "which" },
+            { item: "the man", type: "person", rel: "who" },
+            { item: "the teacher", type: "person", rel: "who" },
+            { item: "the house", type: "thing", rel: "which" },
+            { item: "the girl", type: "person", rel: "who" }
+        ];
+
+        const passiveVerbs = [
+            { activeSing: "builds", passivePres: "is built", passivePast: "was built", obj: "the house" },
+            { activeSing: "cleans", passivePres: "is cleaned", passivePast: "was cleaned", obj: "the room" },
+            { activeSing: "paints", passivePres: "is painted", passivePast: "was painted", obj: "the picture" },
+            { activeSing: "writes", passivePres: "is written", passivePast: "was written", obj: "the report" },
+            { activeSing: "fixes", passivePres: "is fixed", passivePast: "was fixed", obj: "the car" }
+        ];
+
+        function generateTenseModalsQ() {
+            const sub = subjects[Math.floor(Math.random() * subjects.length)];
+            const isPlural = sub.gender === 'p';
+            const act = actionsPastContinuous[Math.floor(Math.random() * actionsPastContinuous.length)];
+            const inter = interruptingActions[Math.floor(Math.random() * interruptingActions.length)];
+            const type = Math.random() < 0.5 ? 'pastCon' : 'modal';
+
+            if (type === 'pastCon') {
+                const isWhen = Math.random() < 0.5;
+                const correct = isPlural ? act.pastConPlural : act.pastConSingular;
+                const verbBase = act.action.split(' ')[0];
+
+                let qText = isWhen ? `While ${sub.en} _______ (${act.action}), ${inter.text}.` : `${sub.en} _______ (${act.action}) when ${inter.text}.`;
+                const key = `pastcon-${sub.en}-${act.action}-${inter.text}`;
+                const options = shuffle([correct, isPlural ? `was ${verbBase}ing` : `were ${verbBase}ing`, `${verbBase}ed`, `has been ${verbBase}ing`]);
+
+                return {
+                    key: key,
+                    category: "1. Advanced Tenses & Verbs",
+                    text: qText,
+                    options: options,
+                    answer: correct,
+                    explanation: `ตอบ **${correct}**<br>• เหตุการณ์ที่กำลังดำเนินอยู่ในอดีต ใช้ **Past Continuous Tense** โครงสร้าง <code>was/were + V.-ing</code><br>• ประธานคือ <b>${sub.en}</b> (${isPlural ? 'พหูพจน์' : 'เอกพจน์'}) จึงใช้ <code>${correct}</code>`
+                };
+            } else {
+                const modalItem = modalContexts[Math.floor(Math.random() * modalContexts.length)];
+                return {
+                    key: `modal-${modalItem.text}`,
+                    category: "1. Modal Verbs",
+                    text: modalItem.text,
+                    options: shuffle([...modalItem.opts]),
+                    answer: modalItem.ans,
+                    explanation: `ตอบ **${modalItem.ans}**<br>• ${modalItem.explain}`
+                };
+            }
+        }
+
+        function generateComplexGrammarQ() {
+            const isRelative = Math.random() < 0.5;
+            if (isRelative) {
+                const obj = relativeObjects[Math.floor(Math.random() * relativeObjects.length)];
+                const sub = subjects[Math.floor(Math.random() * subjects.length)];
+                const text = obj.type === "person" ? `The person _______ lives next door to ${sub.en} is a famous doctor.` : `This is ${obj.item} _______ ${sub.en} bought yesterday.`;
+                const ans = obj.rel;
+                return {
+                    key: `rel-${obj.item}-${sub.en}-${obj.type}`,
+                    category: "2. Relative Clause",
+                    text: text,
+                    options: shuffle([ans, ans === "who" ? "which" : "who", "whose", "where"]),
+                    answer: ans,
+                    explanation: `ตอบ **${ans}**<br>• <b>who</b> ใช้เชื่อมคำนามที่เป็นคน ส่วน <b>which</b> ใช้เชื่อมคำนามที่เป็นสิ่งของ`
+                };
+            } else {
+                const pVerb = passiveVerbs[Math.floor(Math.random() * passiveVerbs.length)];
+                const isPast = Math.random() < 0.5;
+                const timeText = isPast ? "yesterday" : "every day";
+                const ans = isPast ? pVerb.passivePast : pVerb.passivePres;
+                const text = `${pVerb.obj.charAt(0).toUpperCase() + pVerb.obj.slice(1)} _______ by the worker ${timeText}.`;
+                return {
+                    key: `passive-${pVerb.obj}-${isPast}`,
+                    category: "2. Passive Voice",
+                    text: text,
+                    options: shuffle([ans, pVerb.activeSing, isPast ? pVerb.passivePres : pVerb.passivePast, `will ${pVerb.activeSing}`]),
+                    answer: ans,
+                    explanation: `ตอบ **${ans}**<br>• โครงสร้าง Passive Voice คือ <code>Subject + Verb to be + V.3</code>`
+                };
+            }
+        }
+
+        function generateConditionalsQ() {
+            const isWish = Math.random() < 0.5;
+            const sub = subjects[Math.floor(Math.random() * subjects.length)];
+            if (!isWish) {
+                const type = Math.random() < 0.5 ? 1 : 2;
+                const text = type === 1 ? `If it _______ (rain) tomorrow, ${sub.en} will stay at home.` : `If I _______ (be) you, I would study harder for the exam.`;
+                const ans = type === 1 ? "rains" : "were";
+                const options = type === 1 ? ["rains", "rained", "will rain", "would rain"] : ["were", "was", "am", "will be"];
+                return {
+                    key: `cond-${type}-${sub.en}`,
+                    category: `3. Conditionals (Type ${type})`,
+                    text: text,
+                    options: shuffle(options),
+                    answer: ans,
+                    explanation: type === 1 ? `ตอบ **rains** (First Conditional)` : `ตอบ **were** (Second Conditional ใช้ were กับทุกประธาน)`
+                };
+            } else {
+                const wishItems = [
+                    { t: `${sub.en} wishes ${sub.pronoun} _______ (have) more free time right now.`, a: "had", opts: ["had", "has", "have", "would have"] },
+                    { t: `I wish I _______ (be) taller than my brother.`, a: "were", opts: ["were", "am", "was", "will be"] }
+                ];
+                const item = wishItems[Math.floor(Math.random() * wishItems.length)];
+                return {
+                    key: `wish-${item.t}`,
+                    category: "3. Expressing Wishes",
+                    text: item.t,
+                    options: shuffle([...item.opts]),
+                    answer: item.a,
+                    explanation: `ตอบ **${item.a}** (Present Wish ใช้ V.2 / were)`
+                };
+            }
+        }
+
+        function generateReportedSpeechQ() {
+            const sub = subjects[Math.floor(Math.random() * subjects.length)];
+            const types = [
+                { direct: `"I am hungry," said ${sub.en}.`, text: `${sub.en} said that ${sub.pronoun} _______ hungry.`, ans: "was", opts: ["was", "is", "were", "had been"] },
+                { direct: `"I will call you tomorrow," ${sub.en} said.`, text: `${sub.en} said that ${sub.pronoun} _______ call me the next day.`, ans: "would", opts: ["would", "will", "can", "should"] }
+            ];
+            const item = types[Math.floor(Math.random() * types.length)];
+            return {
+                key: `rep-${item.direct}-${sub.en}`,
+                category: "4. Reported Speech",
+                text: `<b>Direct Speech:</b> <i>${item.direct}</i><br><b>Reported Speech:</b> ${item.text}`,
+                options: shuffle([...item.opts]),
+                answer: item.ans,
+                explanation: `ตอบ **${item.ans}** (ถอย Tense ใน Reported Speech)`
+            };
+        }
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function getUniqueQuestionObj() {
+            let attempts = 0;
+            while (attempts < 500) {
+                attempts++;
+                let selectedTopic = currentTopic;
+                if (selectedTopic === 'all') {
+                    const topics = ['tenses', 'grammar', 'conditionals', 'reported'];
+                    selectedTopic = topics[Math.floor(Math.random() * topics.length)];
+                }
+                let qObj = null;
+                if (selectedTopic === 'tenses') qObj = generateTenseModalsQ();
+                else if (selectedTopic === 'grammar') qObj = generateComplexGrammarQ();
+                else if (selectedTopic === 'conditionals') qObj = generateConditionalsQ();
+                else if (selectedTopic === 'reported') qObj = generateReportedSpeechQ();
+
+                if (qObj && !generatedKeysHistory.has(qObj.key)) {
+                    generatedKeysHistory.add(qObj.key);
+                    return qObj;
+                }
+            }
+            generatedKeysHistory.clear();
+            return generateTenseModalsQ();
+        }
+
+        function setTopic(topic) {
+            currentTopic = topic;
+            document.querySelectorAll('.topic-tab').forEach(btn => {
+                btn.classList.remove('bg-purple-600', 'text-white', 'border-purple-400');
+                btn.classList.add('bg-[#080811]', 'text-purple-300', 'border-purple-500/20');
+            });
+            const activeBtn = document.getElementById(`tab-${topic}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-[#080811]', 'text-purple-300', 'border-purple-500/20');
+                activeBtn.classList.add('bg-purple-600', 'text-white', 'border-purple-400');
+            }
+            generateQuestion();
+        }
+
+        function generateQuestion() {
+            isAnswered = false;
+            currentQuestionObj = getUniqueQuestionObj();
+
+            document.getElementById('topic-badge').innerText = currentQuestionObj.category;
+            document.getElementById('unique-key-display').innerText = `#${currentQuestionObj.key.slice(-4)}`;
+            document.getElementById('question-text').innerHTML = currentQuestionObj.text;
+            document.getElementById('explanation-box').classList.add('hidden');
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            currentQuestionObj.options.forEach((opt, idx) => {
+                const optBtn = document.createElement('button');
+                optBtn.className = `option-card w-full p-4 rounded-xl bg-purple-950/20 border border-purple-500/20 text-left font-english font-medium text-purple-100 flex items-center justify-between transition-all duration-200 hover:bg-purple-900/30`;
+                optBtn.onclick = () => checkAnswer(opt, optBtn);
+                optBtn.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-xs font-bold text-purple-300">
+                            ${String.fromCharCode(65 + idx)}
+                        </span>
+                        <span class="text-base">${opt}</span>
+                    </div>
+                `;
+                container.appendChild(optBtn);
+            });
+        }
+
+        function checkAnswer(selectedOpt, selectedBtn) {
+            if (isAnswered) return;
+            isAnswered = true;
+
+            stats.total++;
+            const isCorrect = selectedOpt === currentQuestionObj.answer;
+
+            if (isCorrect) {
+                stats.correct++;
+                selectedBtn.classList.remove('bg-purple-950/20', 'border-purple-500/20');
+                selectedBtn.classList.add('bg-emerald-950/60', 'border-emerald-500', 'text-emerald-200');
+                selectedBtn.innerHTML += `<svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+            } else {
+                stats.wrong++;
+                selectedBtn.classList.remove('bg-purple-950/20', 'border-purple-500/20');
+                selectedBtn.classList.add('bg-rose-950/60', 'border-rose-500', 'text-rose-200');
+                selectedBtn.innerHTML += `<svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+
+                document.querySelectorAll('#options-container button').forEach(btn => {
+                    if (btn.innerText.includes(currentQuestionObj.answer)) {
+                        btn.classList.add('border-emerald-500/70', 'bg-emerald-950/30');
+                    }
+                });
+            }
+
+            document.querySelectorAll('#options-container button').forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('cursor-not-allowed', 'opacity-80');
+            });
+
+            document.getElementById('stat-total').innerText = stats.total;
+            document.getElementById('stat-correct').innerText = stats.correct;
+            document.getElementById('stat-wrong').innerText = stats.wrong;
+            const accuracy = Math.round((stats.correct / stats.total) * 100);
+            document.getElementById('stat-accuracy').innerText = `${accuracy}%`;
+
+            document.getElementById('explanation-text').innerHTML = currentQuestionObj.explanation;
+            document.getElementById('explanation-box').classList.remove('hidden');
+        }
+
+        window.onload = () => {
+            generateQuestion();
+        };
+    </script>
+</body>
+
+</html>
