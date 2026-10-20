@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Term 2 Unit 7: Relative Clauses</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-link"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 7: Relative Clauses (who, whom, whose, which, that)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=tbXxkEeCy24" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Relative Pronouns
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-rel', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Relative Clauses Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 2</span>
+        <h1>Relative Clauses Masterclass Cheat Sheet</h1>
+        <p>สรุปการเลือกใช้ Relative Pronouns (who, whom, whose, which, that) เพื่อเชื่อมและขยายประโยคได้อย่างแม่นยำ
+          ไม่สับสนจุดเชื่อมคำนาม!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- People Pronouns -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-user text-primary"></i> ขยายบุคคล (People)</h3>
+            <span class="tag blue">who / whom / whose</span>
+          </div>
+          <p class="theory-desc">เลือกใช้ตามหน้าที่ของคำนามในประโยคขยาย</p>
+          <div class="formula-box">
+            <div class="formula-title">1. who + Verb (ขยายคน ทำหน้าที่เป็นประธาน)</div>
+            <code>The girl <b>who won</b> the contest is my friend.</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. whom + Subject + Verb (ขยายคน ทำหน้าที่เป็นกรรม)</div>
+            <code>The man <b>whom I met</b> yesterday was very polite.</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">3. whose + Noun (แสดงความเป็นเจ้าของ)</div>
+            <code>The student <b>whose phone</b> rang had to apologize.</code>
+          </div>
+        </div>
+
+        <!-- Things & General Pronouns -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-box-archive text-primary"></i> ขยายสิ่งของ/สัตว์ (Things)</h3>
+            <span class="tag purple">which / that</span>
+          </div>
+          <p class="theory-desc">ใช้ขยายสิ่งของ สัตว์ สถานที่ หรือความคิด</p>
+          <div class="formula-box">
+            <div class="formula-title">which / that</div>
+            <code>The laptop <b>which / that</b> I bought works really fast.</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">ข้อควรระวัง: that</div>
+            <div>• ใช้แทน who/which ใน Defining Relative Clause ได้</div>
+            <div>• <b>ห้าม</b> ใช้ that หลังเครื่องหมาย comma (,) เด็ดขาด!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Relative Clauses Drill -->
+    <div id="tab-rel" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Relative Clauses Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="rel-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="rel-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="rel-options-container"></div>
+
+        <div class="feedback-box hidden" id="rel-feedback">
+          <div class="feedback-header" id="rel-fb-title"></div>
+          <div class="feedback-text" id="rel-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="rel-next-btn" onclick="generateRelQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

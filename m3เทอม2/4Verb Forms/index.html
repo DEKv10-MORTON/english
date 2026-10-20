@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Term 2 Unit 4: Verb Forms (Infinitive & Gerund)</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-shapes"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 4: Verb Forms (Infinitive vs Gerund)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=rhYDgdFm42U" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Infinitives & Gerunds
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-verb', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Verb Forms Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 2</span>
+        <h1>Infinitive & Gerund Masterclass Cheat Sheet</h1>
+        <p>เจาะลึกกฎการเลือกใช้รูปกริยาตามหลังคำกริยาหลัก (Verb Pattern) สรุปกลุ่มกริยาที่ต้องตามด้วย V.-ing, to + V.1
+          หรือ Bare Infinitive!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Gerunds & Infinitives -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-list-check text-primary"></i> 2 กลุ่มกริยาหลักที่ต้องจำ</h3>
+            <span class="tag blue">Verb Patterns</span>
+          </div>
+          <p class="theory-desc">คำกริยาในภาษาอังกฤษมีกฎในการต่อกริยาตัวถัดไปเฉพาะตัว</p>
+          <div class="formula-box">
+            <div class="formula-title">1. Followed by Gerund (V.-ing)</div>
+            <div>• enjoy, finish, avoid, mind, suggest, keep, admit, deny</div>
+            <code><i>e.g. She <b>enjoys reading</b> books.</i></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. Followed by Infinitive with 'to' (to + V.1)</div>
+            <div>• decide, hope, promise, want, refuse, plan, agree</div>
+            <code><i>e.g. He <b>decided to buy</b> a new car.</i></code>
+          </div>
+        </div>
+
+        <!-- Special Cases -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-triangle-exclamation text-primary"></i>
+              กลุ่มพิเศษที่เปลี่ยนความหมาย</h3>
+            <span class="tag purple">ระวังข้อสอบหลอก</span>
+          </div>
+          <p class="theory-desc">คำกริยาบางคำตามด้วย V.-ing หรือ to + V.1 ความหมายจะเปลี่ยนทันที!</p>
+          <div class="formula-box">
+            <div class="formula-title">stop + V.-ing (หยุดทำสิ่งนั้น)</div>
+            <code>He <b>stopped smoking</b>. (เลิกสูบบุหรี่แล้ว)</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">stop + to + V.1 (หยุดเพื่อที่จะทำสิ่งนั้น)</div>
+            <code>He <b>stopped to smoke</b>. (หยุดพักเพื่อที่จะสูบบุหรี่)</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Verb Forms Drill -->
+    <div id="tab-verb" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Verb Forms Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="verb-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="verb-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="verb-options-container"></div>
+
+        <div class="feedback-box hidden" id="verb-feedback">
+          <div class="feedback-header" id="verb-fb-title"></div>
+          <div class="feedback-text" id="verb-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="verb-next-btn" onclick="generateVerbQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

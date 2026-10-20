@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 2 Unit 2: Conversation & Directions</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 2: Conversation & Giving Directions</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Conversation & Directions
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Conversation Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 2</span>
+        <h1>Conversation & Giving Directions Masterclass</h1>
+        <p>เรียนรู้สำนวนภาษาอังกฤษสำหรับการสนทนาในชีวิตประจำวัน การขอร้อง เสนอความช่วยเหลือ และประโยคบอกเส้นทาง (Giving Directions) ที่ออกสอบบ่อยที่สุด!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Giving Directions -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-map-location-dot text-primary"></i> สำนวนการถามทางและบอกทิศทาง</h3>
+            <span class="tag blue">Directions</span>
+          </div>
+          <p class="theory-desc">ประโยคยอดฮิตในการบอกเส้นทางและตำแหน่งสถานที่</p>
+          <div class="formula-box">
+            <div class="formula-title">Asking for Directions (ถามทาง)</div>
+            <div>• <i>Excuse me, how can I get to the station?</i></div>
+            <div>• <i>Is there a bookstore near here?</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Giving Directions (บอกทาง)</div>
+            <div>• <b>Go straight</b> on. (เดินตรงไป)</div>
+            <div>• Turn left / Turn right. (เลี้ยวซ้าย / เลี้ยวขวา)</div>
+            <div>• It's <b>next to / across from / between</b>...</div>
+          </div>
+        </div>
+
+        <!-- Role-Play & Requests -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-people-arrows text-primary"></i> การขอร้องและการเสนอความช่วยเหลือ</h3>
+            <span class="tag purple">Requests & Offers</span>
+          </div>
+          <p class="theory-desc">สำนวนภาษาสุภาพในการแสดงบทบาทสมมติ</p>
+          <div class="formula-box">
+            <div class="formula-title">Making Requests (ขอร้อง)</div>
+            <div>• <i>Could you help me with this bag, please?</i></div>
+            <div>• <i>Would you mind opening the door?</i> (ตอบ: Not at all / Of course)</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Making Offers (เสนอความช่วยเหลือ)</div>
+            <div>• <i>Can I help you? / Shall I carry that for you?</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Conversation & Directions Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1t2-conv-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1t2-conv-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1t2-conv-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1t2-conv-feedback">
+          <div class="feedback-header" id="m1t2-conv-fb-title"></div>
+          <div class="feedback-text" id="m1t2-conv-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1t2-conv-next-btn" onclick="generateM1ConvQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

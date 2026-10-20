@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Term 2 Unit 8: Modals (Obligation, Prohibition, Advice)</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 8: Modals (Obligation, Prohibition & Advice)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=hwYduR9UdBY" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Modals
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-modal', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Modals Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 2</span>
+        <h1>Modal Verbs Masterclass Cheat Sheet</h1>
+        <p>สรุปการใช้งานกริยาช่วยกลุ่มกฎระเบียบ คำสั่ง การห้าม และคำแนะนำ แยกความแตกต่างระหว่าง must, have to, mustn't
+          และ don't have to ให้เป๊ะก่อนทำโจทย์!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Obligation & Prohibition -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-circle-exclamation text-primary"></i> Obligation vs Prohibition
+            </h3>
+            <span class="tag blue">ความจำเป็น vs ข้อห้าม</span>
+          </div>
+          <p class="theory-desc">ใช้บอกข้อบังคับตามกฎหมาย/กฎเกณฑ์ หรือสิ่งที่ห้ามทำเด็ดขาด</p>
+          <div class="formula-box">
+            <div class="formula-title">1. Obligation (จำเป็นต้องทำ)</div>
+            <div>• <b>must</b> (จำเป็นจากความรู้สึกตนเอง/กฎเหล็ก) + V.1</div>
+            <div>• <b>have to / has to</b> (จำเป็นจากกฎภายนอก) + V.1</div>
+            <code><i>e.g. Students <b>must wear</b> school uniforms.</i></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. Prohibition (ห้ามทำเด็ดขาด)</div>
+            <div>• <b>mustn't / must not</b> + V.1 (ผิดกฎหมาย/อันตราย)</div>
+            <code><i>e.g. You <b>mustn't smoke</b> in the hospital.</i></code>
+          </div>
+        </div>
+
+        <!-- Advice & Lack of Necessity -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-hand-holding-heart text-primary"></i> Advice vs Lack of
+              Necessity</h3>
+            <span class="tag purple">คำแนะนำ vs ไม่จำเป็น</span>
+          </div>
+          <p class="theory-desc">ใช้เสนอแนะสิ่งที่ดี หรือบอกสิ่งที่ทำหรือไม่ทำก็ได้</p>
+          <div class="formula-box">
+            <div class="formula-title">3. Advice (การให้คำแนะนำ)</div>
+            <div>• <b>should / ought to / had better</b> + V.1</div>
+            <code><i>e.g. You <b>should see</b> a doctor if you feel sick.</i></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">4. Lack of Necessity (ไม่จำเป็นต้องทำ)</div>
+            <div>• <b>don't have to / doesn't have to / needn't</b> + V.1</div>
+            <code><i>e.g. It's Sunday; you <b>don't have to get up</b> early.</i></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Modals Drill -->
+    <div id="tab-modal" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Modals Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="mod-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="mod-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="mod-options-container"></div>
+
+        <div class="feedback-box hidden" id="mod-feedback">
+          <div class="feedback-header" id="mod-fb-title"></div>
+          <div class="feedback-text" id="mod-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="mod-next-btn" onclick="generateModalQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

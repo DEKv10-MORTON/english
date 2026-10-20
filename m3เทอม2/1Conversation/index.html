@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Term 2 Unit 1: Advanced Conversation</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 1: Conversation (Arguments & Role-play)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=evr6obQoUqs" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+      <a href="https://www.youtube.com/watch?v=Cfm4B66NQKE" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎีสำนวนบทสนทนา
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-conv', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Conversation Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 2</span>
+        <h1>Advanced Conversation & Role-play Cheat Sheet</h1>
+        <p>เรียนรู้สำนวนภาษาอังกฤษสำหรับการโต้แย้งอย่างสุภาพ (Expressing Disagreement), การแสดงความคิดเห็น (Opinions)
+          และการแก้ปัญหาในสถานการณ์ปัจจุบัน!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Agree & Disagree -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-scale-unbalanced text-primary"></i> Arguments & Disagreements
+            </h3>
+            <span class="tag blue">การถกเถียงอย่างสุภาพ</span>
+          </div>
+          <p class="theory-desc">เทคนิคการโต้แย้งอย่างมีมารยาท ไม่ใช้คำพูดรุนแรงเกินไป</p>
+          <div class="formula-box">
+            <div class="formula-title">Polite Disagreement</div>
+            <div>• <i>"I see your point, but..."</i> (ฉันเข้าใจจุดของคุณนะ แต่...)</div>
+            <div>• <i>"I'm afraid I have to disagree."</i> (เกรงว่าฉันต้องขอเห็นต่าง)</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Partial Agreement</div>
+            <div>• <i>"Up to a point, but..."</i> (ก็จริงบางส่วนนะ แต่...)</div>
+          </div>
+        </div>
+
+        <!-- Giving Opinions -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-lightbulb text-primary"></i> Giving Opinions & Role-play</h3>
+            <span class="tag purple">การแสดงความเห็น</span>
+          </div>
+          <p class="theory-desc">สำนวนที่ใช้เริ่มต้นเสนอความคิดเห็นในสถานการณ์ต่างๆ</p>
+          <div class="formula-box">
+            <div class="formula-title">Phrases to Use</div>
+            <div>• <i>"From my perspective, ..."</i> (ในมุมมองของฉัน...)</div>
+            <div>• <i>"As far as I'm concerned, ..."</i> (เท่าที่ฉันเกี่ยวข้อง/คิดนะ...)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Conversation Drill -->
+    <div id="tab-conv" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Conversation Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="conv-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="conv-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="conv-options-container"></div>
+
+        <div class="feedback-box hidden" id="conv-feedback">
+          <div class="feedback-header" id="conv-fb-title"></div>
+          <div class="feedback-text" id="conv-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="conv-next-btn" onclick="generateConvQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

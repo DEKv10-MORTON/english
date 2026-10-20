@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 2 Unit 7: Continuous Tenses</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 7: Continuous Tenses Mastery</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Continuous Tenses
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Continuous Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 2</span>
+        <h1>Continuous Tenses Masterclass (Present, Past, Future)</h1>
+        <p>ทำความเข้าใจตระกูล Continuous ที่เน้นเหตุการณ์ "กำลังดำเนินอยู่" ในสามช่วงเวลาหลัก (อดีต ปัจจุบัน และอนาคต) พร้อมโครงสร้าง Verb to be + V.-ing!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Present & Past Continuous -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-clock-rotate-left text-primary"></i> Present & Past Continuous</h3>
+            <span class="tag blue">Now vs. Past Moment</span>
+          </div>
+          <p class="theory-desc">การใช้ Verb to be ในอดีตและปัจจุบันร่วมกับ V.-ing</p>
+          <div class="formula-box">
+            <div class="formula-title">1. Present Continuous (กำลังทำอยู่ตอนนี้)</div>
+            <code>Subject + <b>is / am / are + V.-ing</b></code>
+            <div><i>e.g. She <b>is reading</b> a book now.</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. Past Continuous (กำลังทำอยู่ในอดีต ณ เวลาเจาะจง)</div>
+            <code>Subject + <b>was / were + V.-ing</b></code>
+            <div><i>e.g. They <b>were playing</b> tennis at 5 PM yesterday.</i></div>
+          </div>
+        </div>
+
+        <!-- Future Continuous -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-forward text-primary"></i> Future Continuous Tense</h3>
+            <span class="tag purple">Future Ongoing Action</span>
+          </div>
+          <p class="theory-desc">ใช้พูดถึงเหตุการณ์ที่จะกำลังดำเนินอยู่ ณ ช่วงเวลาเฉพาะเจาะจงในอนาคต</p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code>Subject + <b>will be + V.-ing</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example & Keyword</div>
+            <div>• <i>At this time tomorrow, I <b>will be flying</b> to Japan.</i></div>
+            <div>• Keyword: <i>at this time tomorrow, this time next week</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Continuous Tenses Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1t2-cont-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1t2-cont-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1t2-cont-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1t2-cont-feedback">
+          <div class="feedback-header" id="m1t2-cont-fb-title"></div>
+          <div class="feedback-text" id="m1t2-cont-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1t2-cont-next-btn" onclick="generateM1ContQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

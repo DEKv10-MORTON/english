@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 2 Unit 1: Future Simple Tense</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 1: Future Simple (will & be going to)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Future Tense
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Future Tense Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 2</span>
+        <h1>Future Simple Tense: will vs. be going to</h1>
+        <p>เปิดฉากเทอม 2 ด้วยการเรียนรู้วิธีการพูดถึงอนาคต แยกความแตกต่างระหว่างการตัดสินใจทันทีด้วย will และการมีแผนการล่วงหน้าด้วย be going to!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Will -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-bolt text-primary"></i> การใช้ will (ตัดสินใจทันที / คาดการณ์)</h3>
+            <span class="tag blue">Instant Decisions</span>
+          </div>
+          <p class="theory-desc">ใช้กับการตัดสินใจทำทันทีขณะพูด หรือการคาดเดาเหตุการณ์ในอนาคต</p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code>Subject + <b>will + V.1 (รูปเดิมไม่เติม s)</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example</div>
+            <code><i>e.g. It's raining. I <b>will take</b> an umbrella.</i></code>
+          </div>
+        </div>
+
+        <!-- Be going to -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-calendar-check text-primary"></i> การใช้ be going to (มีแผนการ / ตั้งใจไว้แล้ว)</h3>
+            <span class="tag purple">Plans & Intentions</span>
+          </div>
+          <p class="theory-desc">ใช้กับแผนการหรือความตั้งใจที่ได้คิดและวางแผนเอาไว้ล่วงหน้าแล้ว</p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code>Subject + <b>is / am / are + going to + V.1</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example</div>
+            <code><i>e.g. We <b>are going to visit</b> Japan next month.</i></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Future Tense Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1t2-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1t2-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1t2-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1t2-feedback">
+          <div class="feedback-header" id="m1t2-fb-title"></div>
+          <div class="feedback-text" id="m1t2-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1t2-next-btn" onclick="generateM1T2Question()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

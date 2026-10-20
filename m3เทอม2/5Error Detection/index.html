@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Term 2 Unit 5: Error Detection</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-bug"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 5: Error Detection (จับผิดไวยากรณ์)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- YouTube Glow Button -->
+      <a href="https://www.youtube.com/watch?v=PzWgK4cntaA" target="_blank" class="yt-pulse-btn"
+        title="คลิปติวเตอร์ YouTube เพิ่มเติม">
+        <i class="fa-brands fa-youtube text-lg"></i>
+        <span>ติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. เทคนิค Error Detection
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-error', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Error Detection Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn"
+        style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square"
+          style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.3 เทอม 2</span>
+        <h1>Error Detection Masterclass Cheat Sheet</h1>
+        <p>หลักการวิเคราะห์และมองหาจุดผิดทางไวยากรณ์อย่างเป็นระบบ สแกนโครงสร้างประโยค 4 จุดสำคัญเพื่อเก็บคะแนนให้เป๊ะ!
+        </p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Checklist 4 Steps -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-list-check text-primary"></i> 4 จุดเช็กอินเมื่อทำข้อสอบ Error
+            </h3>
+            <span class="tag blue">Checklist</span>
+          </div>
+          <p class="theory-desc">ลำดับขั้นตอนการตรวจสอบเพื่อหาตัวเลือกที่ผิดไวยากรณ์</p>
+          <div class="formula-box">
+            <div class="formula-title">1. Subject-Verb Agreement</div>
+            <code>ประธานเอกพจน์/พหูพจน์ สอดคล้องกับกริยาหรือไม่?</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. Tenses & Parallelism</div>
+            <code>ลำดับเวลาและคำบอกเวลาตรงกับรูปกริยาหรือไม่?</code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">3. Verb Pattern & Passive Voice</div>
+            <code>เป็นผู้ทำหรือถูกกระทำ? กริยาตามด้วย to+V.1 หรือ V.-ing?</code>
+          </div>
+        </div>
+
+        <!-- Common Traps -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-triangle-exclamation text-primary"></i> กับดักที่ออกสอบบ่อย
+            </h3>
+            <span class="tag purple">Common Traps</span>
+          </div>
+          <p class="theory-desc">จุดที่ข้อสอบชอบหลอกนักเรียน ม.3</p>
+          <div class="formula-box">
+            <div class="formula-title">Prepositional Phrase ขยายประธาน</div>
+            <div><i>The list <u>of new rules</u> <b>is</b> (ไม่ใช่ are) clear.</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Part of Speech ผิดตำแหน่ง</div>
+            <div><i>She sings <u>beautiful</u> (ต้องแก้เป็น <b>beautifully</b> เพื่อขยายกริยา).</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Error Drill -->
+    <div id="tab-error" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Error Detection Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="err-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="err-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="err-options-container"></div>
+
+        <div class="feedback-box hidden" id="err-feedback">
+          <div class="feedback-header" id="err-fb-title"></div>
+          <div class="feedback-text" id="err-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="err-next-btn" onclick="generateErrorQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

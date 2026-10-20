@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 2 Unit 3: Advanced Adjectives & Adverbs</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 3: Advanced Adjectives & Adverbs</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Adjective & Adverb ซับซ้อน
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Advanced Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 2</span>
+        <h1>Advanced Adjectives & Adverbs Masterclass</h1>
+        <p>เจาะลึกความต่างระหว่าง Adjective ลงท้ายด้วย -ed และ -ing รวมถึงการวางตำแหน่ง Adverbs of Frequency และ Adverbs of Time ให้แม่นยำ!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- -ed vs -ing Adjectives -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-face-smile text-primary"></i> Adjectives: -ed vs. -ing</h3>
+            <span class="tag blue">Feelings vs. Causes</span>
+          </div>
+          <p class="theory-desc">ข้อแตกต่างระหว่างการบอกความรู้สึกกับสิ่งที่เป็นต้นเหตุของความรู้สึกนั้น</p>
+          <div class="formula-box">
+            <div class="formula-title">1. ลงท้ายด้วย -ed (บอกความรู้สึกของคน)</div>
+            <code><i>e.g. I am <b>interested</b> in science. (ฉันรู้สึกสนใจ)</i></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. ลงท้ายด้วย -ing (บอกลักษณะของสิ่งของ/เหตุการณ์)</div>
+            <code><i>e.g. This book is very <b>interesting</b>. (หนังสือน่าสนใจ)</i></code>
+          </div>
+        </div>
+
+        <!-- Adverbs of Frequency & Time -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-clock text-primary"></i> Adverbs of Frequency & Time</h3>
+            <span class="tag purple">Placement Rules</span>
+          </div>
+          <p class="theory-desc">ตำแหน่งการวางคำวิเศษณ์บอกความถี่และเวลาในประโยค</p>
+          <div class="formula-box">
+            <div class="formula-title">Adverbs of Frequency (ความถี่)</div>
+            <div>• <b>หน้ากริยาแท้:</b> <i>He <u>always</u> gets up early.</i></div>
+            <div>• <b>หลัง Verb to be:</b> <i>She is <u>always</u> late.</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Adverbs of Time (เวลา)</div>
+            <div>• มักวางไว้ท้ายประโยคหรือหน้าประโยค <i>(yesterday, recently)</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Advanced Adjective & Adverb Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1t2-adv2-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1t2-adv2-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1t2-adv2-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1t2-adv2-feedback">
+          <div class="feedback-header" id="m1t2-adv2-fb-title"></div>
+          <div class="feedback-text" id="m1t2-adv2-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1t2-adv2-next-btn" onclick="generateM1Adv2Question()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 2 Unit 6: Compound & Complex Sentences</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-network-wired"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 2 • Unit 6: Compound & Complex Sentences</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎีประโยคความรวม/ความซ้อน
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Sentence Types Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 2</span>
+        <h1>Compound & Complex Sentences Masterclass</h1>
+        <p>เรียนรู้โครงสร้างประโยคระดับสูงขึ้น แยกแยะระหว่างประโยคความรวม (Compound) ที่เชื่อมด้วย FANBOYS และประโยคความซ้อน (Complex) ที่มีประโยคย่อยขยาย!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Compound Sentence -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-link text-primary"></i> Compound Sentence (ประโยคความรวม)</h3>
+            <span class="tag blue">FANBOYS Conjunctions</span>
+          </div>
+          <p class="theory-desc">เกิดจากการนำประโยคใจความสมบูรณ์ (Independent Clause) 2 ประโยคมารวมกันด้วยคำเชื่อมพิกัด</p>
+          <div class="formula-box">
+            <div class="formula-title">Core Connectors (FANBOYS)</div>
+            <div>• <b>F</b>or, <b>A</b>nd, <b>N</b>or, <b>B</b>ut, <b>O</b>r, <b>Y</b>et, <b>S</b>o</div>
+            <code><i>e.g. It was raining, <b>so</b> I took an umbrella.</i></code>
+          </div>
+        </div>
+
+        <!-- Complex Sentence -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-sitemap text-primary"></i> Complex Sentence (ประโยคความซ้อน)</h3>
+            <span class="tag purple">Subordinating Conjunctions</span>
+          </div>
+          <p class="theory-desc">ประกอบด้วยประโยคหลัก (Main Clause) และประโยคย่อย (Dependent Clause) ที่ขึ้นต้นด้วยคำเชื่อมบอกเหตุผล เวลา หรือเงื่อนไข</p>
+          <div class="formula-box">
+            <div class="formula-title">Core Connectors</div>
+            <div>• <i>because, although, if, when, while, since</i></div>
+            <code><i>e.g. I stayed home <b>because</b> I was sick.</i></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Sentence Types Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1t2-sent2-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1t2-sent2-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1t2-sent2-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1t2-sent2-feedback">
+          <div class="feedback-header" id="m1t2-sent2-fb-title"></div>
+          <div class="feedback-text" id="m1t2-sent2-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1t2-sent2-next-btn" onclick="generateM1Sent2Question()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

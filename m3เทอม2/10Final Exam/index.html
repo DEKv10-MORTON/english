@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.3 - Comprehensive Final Exam Drill (เทอม 2)</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.3 By : Dek Morton Studio</h2>
+          <p>แนวข้อสอบรวมปลายภาค • เทอม 2 (Comprehensive Final Exam)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-summary', this)">
+        <i class="fa-solid fa-list-check"></i> 1. สรุปขอบเขตข้อสอบ ม.2
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-final', this)">
+        <i class="fa-solid fa-fire"></i> 2. ข้อสอบรวมปลายภาค เทอม 2
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Final Exam Scope Summary -->
+    <div id="tab-summary" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">ม.3 เทอม 2 Final Review</span>
+        <h1>ขอบเขตแนวข้อสอบรวมปลายภาคเรียนที่ 2</h1>
+        <p>ทดสอบความรู้ภาษาอังกฤษแบบจัดเต็มทุกหมวดไวยากรณ์และทักษะการอ่าน เพื่อเตรียมความพร้อมโค้งสุดท้ายก่อนสอบปลายภาค!</p>
+      </div>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-bookmark text-primary"></i> 9 หมวดเนื้อหาที่ออกสอบ</h3>
+            <span class="tag blue">Full Term Coverage</span>
+          </div>
+          <div class="formula-box" style="line-height: 1.8;">
+            <div>1. <b>Advanced Conversation:</b> Arguments & Role-play[cite: 2]</div>
+            <div>2. <b>Mixed & Narrative Tenses:</b> Past Simple, Continuous & Perfect[cite: 2]</div>
+            <div>3. <b>All Conditionals:</b> Zero, First, Second, Third[cite: 2]</div>
+            <div>4. <b>Verb Forms:</b> Infinitives vs. Gerunds[cite: 2]</div>
+            <div>5. <b>Error Detection:</b> Grammar Spotting[cite: 2]</div>
+            <div>6. <b>Subject-Verb Agreement:</b> Complex Cases[cite: 2]</div>
+            <div>7. <b>Relative Clauses:</b> who, whom, whose, which, that[cite: 2]</div>
+            <div>8. <b>Modals:</b> Obligation, Prohibition, Advice[cite: 2]</div>
+            <div>9. <b>Vocabulary & Reading:</b> Context Clues & Critical Tone[cite: 2]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Final Exam Drill -->
+    <div id="tab-final" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator" id="exam-topic-badge"><i class="fa-solid fa-cubes"></i> Loading Topic...</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="final-q-text">กำลังโหลดข้อสอบปลายภาค...</h3>
+          <div class="question-hint" id="final-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="final-options-container"></div>
+
+        <div class="feedback-box hidden" id="final-feedback">
+          <div class="feedback-header" id="final-fb-title"></div>
+          <div class="feedback-text" id="final-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="final-next-btn" onclick="generateFinalQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
