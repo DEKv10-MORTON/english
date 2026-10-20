@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 1 Unit 2: Past Simple Tense</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 2: Past Simple Tense Mastery</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Past Simple Tense
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Past Simple Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 1</span>
+        <h1>Past Simple Tense Masterclass</h1>
+        <p>เรียนรู้วิธีการเล่าเรื่องราวในอดีต เหตุการณ์ที่เกิดขึ้นและจบลงไปแล้วอย่างสมบูรณ์ สังเกตคำบอกเวลาและกริยาช่อง 2 (V.2)!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Affirmative & Structure -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-calendar-days text-primary"></i> โครงสร้างประโยคบอกเล่า</h3>
+            <span class="tag blue">Verb 2 (Past Form)</span>
+          </div>
+          <p class="theory-desc">ใช้พูดถึงสิ่งที่เกิดขึ้นและสิ้นสุดลงไปแล้วในอดีต</p>
+          <div class="formula-box">
+            <div class="formula-title">Structure</div>
+            <code>Subject + <b>V.2 (Regular เติม -ed / Irregular เปลี่ยนรูป)</b></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Example</div>
+            <code>• <i>She <b>visited</b> her grandparents yesterday.</i> (Regular)</code><br>
+            <code>• <i>They <b>went</b> to Japan last year.</i> (Irregular)</code>
+          </div>
+        </div>
+
+        <!-- Negative & Questions -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-circle-question text-primary"></i> ประโยคปฏิเสธและคำถาม</h3>
+            <span class="tag purple">DID เข้ามาช่วย</span>
+          </div>
+          <p class="theory-desc">เมื่อทำเป็นปฏิเสธหรือคำถาม ให้ใช้กริยาช่วย 'did' และเปลี่ยน V.2 กลับเป็น V.1 รูปเดิม</p>
+          <div class="formula-box">
+            <div class="formula-title">Negative (ปฏิเสธ)</div>
+            <code>Subject + <b>did not (didn't) + V.1 (รูปเดิม)</b></code>
+            <div><i>e.g. He <b>didn't go</b> to school.</i></div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Keywords (คำบอกเวลาอดีต)</div>
+            <div>• <i>yesterday, last night/week/year, ... ago, in 2010</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Past Simple Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1-p2-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1-p2-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1-p2-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1-p2-feedback">
+          <div class="feedback-header" id="m1-p2-fb-title"></div>
+          <div class="feedback-text" id="m1-p2-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1-p2-next-btn" onclick="generateM1PastQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

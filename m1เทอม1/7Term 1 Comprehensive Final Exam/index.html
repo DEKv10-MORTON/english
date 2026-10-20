@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Comprehensive Final Exam Drill (เทอม 1)</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>แนวข้อสอบรวมปลายภาค • ม.1 เทอม 1 (Comprehensive Final Exam)</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-summary', this)">
+        <i class="fa-solid fa-list-check"></i> 1. สรุปขอบเขตข้อสอบ ม.1
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-final', this)">
+        <i class="fa-solid fa-fire"></i> 2. ข้อสอบรวมปลายภาค เทอม 1
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Final Exam Scope Summary -->
+    <div id="tab-summary" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">ม.1 เทอม 1 Final Review</span>
+        <h1>ขอบเขตแนวข้อสอบรวมปลายภาคเรียนที่ 1</h1>
+        <p>ทบทวนความรู้พื้นฐานไวยากรณ์ภาษาอังกฤษระดับ ม.1 ทุกหัวข้อ จัดเต็มความพร้อมก่อนลงสนามสอบจริง!</p>
+      </div>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-bookmark text-primary"></i> 6 หมวดเนื้อหาหลักที่ออกสอบ</h3>
+            <span class="tag blue">Full Term Coverage</span>
+          </div>
+          <div class="formula-box" style="line-height: 1.8;">
+            <div>1. <b>Present Tenses:</b> Present Simple vs. Continuous</div>
+            <div>2. <b>Past Simple Tense:</b> Regular & Irregular V.2</div>
+            <div>3. <b>Verbs:</b> Main Verbs & Auxiliary Verbs (Be, Do, Does)</div>
+            <div>4. <b>Sentence Construction:</b> Subject + Verb + Object (S+V+O)</div>
+            <div>5. <b>Adjectives & Comparison:</b> Comparative & Superlative</div>
+            <div>6. <b>Adverbs of Manner:</b> การสร้างและตำแหน่งคำวิเศษณ์ (-ly)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Final Exam Drill -->
+    <div id="tab-final" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator" id="exam-topic-badge"><i class="fa-solid fa-cubes"></i> Loading Topic...</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="final-q-text">กำลังโหลดข้อสอบปลายภาค ม.1...</h3>
+          <div class="question-hint" id="final-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="final-options-container"></div>
+
+        <div class="feedback-box hidden" id="final-feedback">
+          <div class="feedback-header" id="final-fb-title"></div>
+          <div class="feedback-text" id="final-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="final-next-btn" onclick="generateM1FinalQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

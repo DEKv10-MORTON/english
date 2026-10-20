@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 1 Unit 3: Main Verbs & Auxiliary Verbs</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 3: Main Verbs & Auxiliary Verbs</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Main & Auxiliary Verbs
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Verb Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 1</span>
+        <h1>Main Verbs vs. Auxiliary Verbs Masterclass</h1>
+        <p>ทำความเข้าใจหัวใจของประโยคภาษาอังกฤษ แยกแยะระหว่างคำกริยาแท้ที่แสดงการกระทำ และคำกริยาช่วยที่เข้ามาช่วยสร้างประโยคปฏิเสธและคำถาม!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Main Verb -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-person-running text-primary"></i> กริยาแท้ (Main Verb)</h3>
+            <span class="tag blue">หัวใจของประโยค</span>
+          </div>
+          <p class="theory-desc">คำกริยาที่แสดงการกระทำ สภาพ หรือการดำรงอยู่ที่มีความหมายในตัวเองโดยไม่ต้องมีคำอื่นมาช่วยเสริม</p>
+          <div class="formula-box">
+            <div class="formula-title">Types & Example</div>
+            <div>• <b>Action Verbs:</b> run, eat, sleep, write</div>
+            <div>• <b>State Verbs:</b> love, like, know, want</div>
+            <code><i>e.g. She <b>eats</b> an apple every day.</i></code>
+          </div>
+        </div>
+
+        <!-- Auxiliary Verb -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-hands-holding-child text-primary"></i> กริยาช่วย (Auxiliary Verb)</h3>
+            <span class="tag purple">Verb to be, Do, Does</span>
+          </div>
+          <p class="theory-desc">คำกริยาที่ทำหน้าที่ช่วยกริยาแท้ เพื่อบอกเวลา (Tense) หรือช่วยสร้างประโยคปฏิเสธและคำถาม</p>
+          <div class="formula-box">
+            <div class="formula-title">Primary Auxiliaries</div>
+            <div>• <b>Verb to be (is, am, are, was, were):</b> ช่วยสร้างประโยคกำลังทำ (Continuous) หรือ Passive Voice</div>
+            <div>• <b>Do / Does / Did:</b> ช่วยสร้างประโยคปฏิเสธและคำถามใน Present/Past Simple</div>
+            <code><i>e.g. <b>Do</b> you like music? / He <b>does not</b> smoke.</i></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Verb Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1-v-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1-v-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1-v-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1-v-feedback">
+          <div class="feedback-header" id="m1-v-fb-title"></div>
+          <div class="feedback-text" id="m1-v-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1-v-next-btn" onclick="generateM1VerbQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngMaster ม.1 - Term 1 Unit 5: Adjectives & Comparison</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-feather"></i>
+        </div>
+        <div class="brand-text">
+          <h2>EngMaster ม.1 By : Dek Morton Studio</h2>
+          <p>เทอม 1 • Unit 5: Adjectives & Basic Comparison</p>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-info">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <div class="stat-info">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value" id="streak-val">0</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <span class="stat-icon">🏆</span>
+          <div class="stat-info">
+            <span class="stat-label">Progress</span>
+            <span class="stat-value" id="progress-val">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-theory', this)">
+        <i class="fa-solid fa-book-open"></i> 1. ทฤษฎี Adjectives
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-drill', this)">
+        <i class="fa-solid fa-bolt"></i> 2. Adjective Drill
+      </button>
+      <!-- ปุ่มลิงก์ภายนอกไปยัง Sentence Builder ตามมาตรฐาน -->
+      <a href="https://dekv10-morton.github.io/Sentence-Builder/" target="_blank" class="tab-btn" style="text-decoration: none;">
+        <i class="fa-solid fa-puzzle-piece"></i> 3. Sentence Builder <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+      </a>
+    </nav>
+
+    <!-- Tab 1: Theory -->
+    <div id="tab-theory" class="tab-content active">
+      <div class="banner-card">
+        <span class="badge-pill">สรุปเนื้อหา ม.1 เทอม 1</span>
+        <h1>Adjectives & Comparison Masterclass</h1>
+        <p>เรียนรู้หน้าที่ของคำคุณศัพท์ในการขยายคำนาม ตำแหน่งการวางในประโยค และกฎการเปรียบเทียบขั้นกว่า (Comparative) กับขั้นที่สุด (Superlative)!</p>
+      </div>
+
+      <div class="theory-grid">
+        <!-- Position & Function -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-bullseye text-primary"></i> หน้าที่และตำแหน่งของ Adjectives</h3>
+            <span class="tag blue">Position & Rules</span>
+          </div>
+          <p class="theory-desc">ตำแหน่งการวางคำคุณศัพท์ในประโยคภาษาอังกฤษมี 2 จุดหลัก</p>
+          <div class="formula-box">
+            <div class="formula-title">1. วางหน้าคำนาม (Before a Noun)</div>
+            <code><i>e.g. She has a <b>red</b> car. / He is a <b>smart</b> student.</i></code>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">2. วางหลัง Linking Verb (เช่น is, am, are, look, feel)</div>
+            <code><i>e.g. The weather today is <b>hot</b>. / You look <b>happy</b>.</i></code>
+          </div>
+        </div>
+
+        <!-- Comparison Rules -->
+        <div class="theory-card">
+          <div class="card-header-tag">
+            <h3 class="card-title"><i class="fa-solid fa-chart-line text-primary"></i> การเปรียบเทียบ (Degrees of Comparison)</h3>
+            <span class="tag purple">-er / -est & more / most</span>
+          </div>
+          <p class="theory-desc">กฎการเปลี่ยนรูปคำคุณศัพท์เพื่อเปรียบเทียบสิ่งของหรือบุคคล</p>
+          <div class="formula-box">
+            <div class="formula-title">Comparative (ขั้นกว่า: กว่า...)</div>
+            <div>• คำสั้นเติม -er + than (tall ➔ taller than)</div>
+            <div>• คำยาวเติม more + adjective + than (expensive ➔ more expensive than)</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-title">Superlative (ขั้นที่สุด: ที่สุดใน...)</div>
+            <div>• คำสั้นเติม the + -est (tall ➔ the tallest)</div>
+            <div>• คำยาวเติม the most + adjective (expensive ➔ the most expensive)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Drill -->
+    <div id="tab-drill" class="tab-content">
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span class="topic-indicator"><i class="fa-solid fa-bolt"></i> Adjective Challenge</span>
+          <span class="generator-tag"><i class="fa-solid fa-infinity"></i> Infinite Generator (Queue)</span>
+        </div>
+
+        <div class="question-box">
+          <h3 class="question-title" id="m1-adj-q-text">กำลังโหลดโจทย์...</h3>
+          <div class="question-hint" id="m1-adj-q-hint">คำชี้แนะบริบทจะปรากฏตรงนี้</div>
+        </div>
+
+        <div class="options-grid" id="m1-adj-options-container"></div>
+
+        <div class="feedback-box hidden" id="m1-adj-feedback">
+          <div class="feedback-header" id="m1-adj-fb-title"></div>
+          <div class="feedback-text" id="m1-adj-fb-desc"></div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-action hidden" id="m1-adj-next-btn" onclick="generateM1AdjQuestion()">
+            ข้อถัดไป <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
