@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แนวข้อสอบภาษาอังกฤษ ม.2 เทอม 1 (50 ข้อ)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Sarabun', sans-serif;
+    }
+
+    body {
+      background-color: #f0fdf4;
+      color: #1e293b;
+      padding-bottom: 50px;
+    }
+
+    .main-header {
+      background-color: #00a66c;
+      color: #ffffff;
+      padding: 14px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-icon {
+      width: 42px;
+      height: 42px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: #00a66c;
+    }
+
+    .header-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .header-subtitle {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .yt-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #ffffff;
+      color: #dc2626;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .yt-button:hover {
+      background-color: #dc2626;
+      color: #ffffff;
+    }
+
+    .yt-button svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .control-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .select-group {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .select-label {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .custom-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background-color: #f8fafc;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .stats-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .stat-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .stat-value span {
+      color: #00a66c;
+      font-size: 1.3rem;
+    }
+
+    .divider {
+      width: 1px;
+      height: 32px;
+      background-color: #e2e8f0;
+    }
+
+    .progress-bar-bg {
+      height: 8px;
+      background-color: #e2e8f0;
+      border-radius: 4px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 2%;
+      background-color: #00a66c;
+      transition: width 0.3s ease;
+    }
+
+    .question-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .chapter-tag {
+      background-color: #dcfce7;
+      color: #166534;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .status-tag {
+      background-color: #f1f5f9;
+      color: #64748b;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .question-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background-color: #ffffff;
+    }
+
+    .option-item:hover {
+      border-color: #00a66c;
+      background-color: #f0fdf4;
+    }
+
+    .option-item.selected {
+      border-color: #00a66c;
+      background-color: #f0fdf4;
+    }
+
+    .option-item.correct {
+      border-color: #16a34a !important;
+      background-color: #dcfce7 !important;
+      color: #15803d;
+    }
+
+    .option-item.wrong {
+      border-color: #dc2626 !important;
+      background-color: #fee2e2 !important;
+      color: #b91c1c;
+    }
+
+    .option-item.disabled {
+      pointer-events: none;
+    }
+
+    .radio-circle {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #cbd5e1;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .option-item.selected .radio-circle {
+      border-color: #00a66c;
+      border-width: 6px;
+    }
+
+    .action-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-submit {
+      background-color: #00a66c;
+      color: white;
+    }
+
+    .btn-submit:hover {
+      background-color: #008f5d;
+    }
+
+    .btn-random {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    .btn-random:hover {
+      background-color: #2563eb;
+    }
+
+    .btn-explain {
+      background-color: #f59e0b;
+      color: white;
+      display: none;
+    }
+
+    .btn-explain:hover {
+      background-color: #d97706;
+    }
+
+    .explanation-box {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background-color: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .explanation-title {
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 6px;
+    }
+
+    .explanation-text {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <div class="header-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V7h10v2z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="header-title">แนวข้อสอบวิชาภาษาอังกฤษ ม.2 เทอม 1</h1>
+          <p class="header-subtitle">ระบบฝึกทำข้อสอบ Interactive 50 ข้อ พร้อมเฉลยรายละเอียด</p>
+        </div>
+      </div>
+
+      <a href="https://www.youtube.com/watch?v=IdN6QkwuVk0" target="_blank" rel="noopener noreferrer" class="yt-button">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.816zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+        <span>ดูติวเตอร์</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="control-card">
+      <div class="select-group">
+        <div class="select-label">เลือกหัวข้อไวยากรณ์ (Grammar Topics):</div>
+        <select class="custom-select" id="chapter-select" onchange="filterQuestions()">
+          <option value="all">ทำข้อสอบทั้งหมด (คละหัวข้อ 50 ข้อ)</option>
+          <option value="1">1. Adjective and Adverb[cite: 11]</option>
+          <option value="2">2. Pronoun (คำสรรพนาม)[cite: 11]</option>
+          <option value="3">3. Preposition (บุพบท บอกเวลา/สถานที่/ทิศทาง)[cite: 11]</option>
+          <option value="4">4. Connectors (คำเชื่อมประโยค)[cite: 11]</option>
+          <option value="5">5. Tenses (Present & Past)[cite: 11]</option>
+          <option value="6">6. Question Tags[cite: 11]</option>
+        </select>
+      </div>
+
+      <div class="stats-group">
+        <div class="stat-item">
+          <div class="stat-label">ข้อที่</div>
+          <div class="stat-value"><span id="current-index">1</span> / <span id="total-count">50</span></div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">คะแนนรวม</div>
+          <div class="stat-value"><span id="score-count">0</span> คะแนน</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-bar"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-header">
+        <span class="chapter-tag" id="question-chapter">หัวข้อ</span>
+        <span class="status-tag" id="question-status">ยังไม่ได้ตอบ</span>
+      </div>
+
+      <h2 class="question-text" id="question-title">กำลังโหลดโจทย์...</h2>
+      <div class="options-list" id="options-container"></div>
+
+      <div class="action-group">
+        <button class="btn btn-submit" onclick="checkAnswer()">Check ตรวจคำตอบ</button>
+        <button class="btn btn-random" onclick="loadRandomQuestion()">🎲 สุ่มโจทย์ข้อใหม่</button>
+        <button class="btn btn-explain" id="btn-explain" onclick="toggleExplanation()">💡 ดูเฉลยรายละเอียด</button>
+      </div>
+
+      <div class="explanation-box" id="explanation-box">
+        <div class="explanation-title">📌 เฉลยและคำอธิบายหลักไวยากรณ์:</div>
+        <div class="explanation-text" id="explanation-text"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // คลังข้อสอบภาษาอังกฤษ ม.2 เทอม 1 จำนวน 50 ข้อ ครบทุกหัวข้อ
+    const questionBank = [
+      // --- 1. Adjective and Adverb (ข้อ 1-8)[cite: 11] ---
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "She sings very ________. Everyone in the room is amazed.", options: ["A) beautiful", "B) beautifully", "C) beauty", "D) beautify"], correctIndex: 1, explain: "ใช้ Adverb (beautifully) มาขยายคำกริยา sings ว่าร้องเพลงอย่างไพเราะ" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "My brother is a ________ driver. He always drives carefully.", options: ["A) safe", "B) safely", "C) safety", "D) safes"], correctIndex: 0, explain: "ใช้ Adjective (safe) มาขยายคำนาม driver (คนขับรถที่ปลอดภัย)" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "This math problem is ________ than the last one.", options: ["A) difficult", "B) more difficult", "C) most difficult", "D) as difficult"], correctIndex: 1, explain: "มีคำว่า 'than' เป็นขั้นกว่า (Comparative) ของคำคุณศัพท์ยาว จึงใช้ more difficult" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "Of all the students, Mark runs the ________.", options: ["A) fast", "B) faster", "C) fastest", "D) most fast"], correctIndex: 2, explain: "มีวลี 'Of all...' บ่งบอกถึงขั้นสูงสุด (Superlative) จึงใช้ fastest" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "He speaks English quite ________ because he lived in London for years.", options: ["A) fluent", "B) fluently", "C) fluency", "D) more fluent"], correctIndex: 1, explain: "ขยายกริยา speaks ต้องใช้ Adverb คือ fluently" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "Your room looks very ________. Please clean it up!", options: ["A) mess", "B) messy", "C) messily", "D) messiness"], correctIndex: 1, explain: "หลัง Linking verb 'looks' ต้องตามด้วย Adjective คือ messy (รก)" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "Sue arrived ________ than expected, so we missed her at the station.", options: ["A) late", "B) later", "C) latest", "D) lately"], correctIndex: 1, explain: "เปรียบเทียบสองเวลาโดยมี 'than' ใช้ขั้นกว่าของ late คือ later" },
+      { chapterId: 1, chapterName: "1. Adjective & Adverb", title: "The test was not as ________ as I thought it would be.", options: ["A) easy", "B) easier", "C) easily", "D) easiest"], correctIndex: 0, explain: "โครงสร้าง as + adjective/adverb + as ใช้ Adjective รูปปกติคือ easy" },
+
+      // --- 2. Pronoun (ข้อ 9-16)[cite: 11] ---
+      { chapterId: 2, chapterName: "2. Pronoun", title: "This book belongs to me. It is ________.", options: ["A) my", "B) mine", "C) me", "D) I"], correctIndex: 1, explain: "ใช้ Possessive Pronoun (mine = ของฉัน) วางไว้ท้ายประโยคโดยไม่ต้องมีคำนามตามหลัง" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "John and ________ went to the science museum yesterday.", options: ["A) me", "B) my", "C) I", "D) mine"], correctIndex: 2, explain: "ทำหน้าที่เป็นประธานของประโยคคู่กับ John จึงใช้ Subject pronoun คือ 'I'" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "The cat cleaned ________ paws after walking in the mud.", options: ["A) it", "B) its", "C) it's", "D) itself"], correctIndex: 1, explain: "ใช้ Possessive Adjective (its) นำหน้าคำนาม paws (อุ้งเท้าของมัน)" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "Sarah made this birthday cake by ________.", options: ["A) herself", "B) himself", "C) myself", "D) itself"], correctIndex: 0, explain: "Reflexive pronoun ของประธาน Sarah (ผู้หญิง) คือ herself (ทำด้วยตัวเอง)" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "Teacher gave ________ some homework to do over the weekend.", options: ["A) we", "B) our", "C) us", "D) ours"], correctIndex: 2, explain: "ทำหน้าที่เป็นกรรมตามหลังกริยา 'gave' จึงใช้ Object pronoun คือ us" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "________ of the two students won the first prize in the speech contest.", options: ["A) Who", "B) Both", "C) Which", "D) Whose"], correctIndex: 1, explain: "ใช้สรรพนาม 'Both' (ทั้งสองคน) เพื่อชี้เฉพาะนักเรียนสองคน" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "I can't find my keys anywhere. Did you see ________?", options: ["A) they", "B) them", "C) their", "D) theirs"], correctIndex: 1, explain: "แทนคำนาม keys ที่เป็นพหูพจน์และทำหน้าที่เป็นกรรม จึงใช้ them" },
+      { chapterId: 2, chapterName: "2. Pronoun", title: "That red car parked outside is ________.", options: ["A) our", "B) ours", "C) us", "D) we"], correctIndex: 1, explain: "ใช้อยู่ท้ายประโยคแสดงความเป็นเจ้าของโดยไม่ต้องมีคำนามตามหลังคือ ours" },
+
+      // --- 3. Preposition (ข้อ 17-25)[cite: 11] ---
+      { chapterId: 3, chapterName: "3. Preposition", title: "My birthday is ________ July.", options: ["A) at", "B) on", "C) in", "D) by"], correctIndex: 2, explain: "ใช้ 'in' นำหน้าเดือน ปี หรือฤดูกาล" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "We have an English class ________ Monday mornings.", options: ["A) at", "B) on", "C) in", "D) to"], correctIndex: 1, explain: "ใช้ 'on' นำหน้าชื่อวัน หรือวันเฉพาะเจาะจง (Monday mornings)" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "The movie starts ________ 8:30 PM tonight.", options: ["A) at", "B) on", "C) in", "D) over"], correctIndex: 0, explain: "ใช้ 'at' นำหน้าเวลาเฉพาะเจาะจง (8:30 PM)" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "The cat is sleeping comfortably ________ the sofa.", options: ["A) at", "B) in", "C) on", "D) under"], correctIndex: 2, explain: "อยู่บนพื้นผิวโซฟา ใช้ Preposition คือ 'on'" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "There is a small bridge ________ the river.", options: ["A) over", "B) in", "C) at", "D) on"], correctIndex: 0, explain: "สะพานพาดผ่านแม่น้ำแบบลอยเหนือขึ้นไป ใช้ 'over' หรือ 'across'" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "She lives ________ 45 Sukhumvit Road in Bangkok.", options: ["A) in", "B) on", "C) at", "D) by"], correctIndex: 2, explain: "ใช้ 'at' นำหน้าบ้านเลขที่เฉพาะเจาะจง" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "The post office is ________ the bank and the bookstore.", options: ["A) next to", "B) between", "C) among", "D) behind"], correctIndex: 1, explain: "อยู่ระหว่างสถานที่สองแห่ง ใช้ 'between'" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "Please hand in your project ________ Friday afternoon.", options: ["A) at", "B) in", "C) on", "D) by"], correctIndex: 2, explain: "ระบุวันในสัปดาห์ใช้ 'on'" },
+      { chapterId: 3, chapterName: "3. Preposition", title: "We usually visit our grandparents ________ the weekend.", options: ["A) at", "B) on", "C) in", "D) to"], correctIndex: 0, explain: "สำนวนมาตรฐานภาษาอังกฤษใช้ 'at the weekend' (หรือ on the weekend ในอเมริกัน แต่ at เป็นที่นิยมในอังกฤษ)" },
+
+      // --- 4. Connectors (ข้อ 26-33)[cite: 11] ---
+      { chapterId: 4, chapterName: "4. Connectors", title: "I wanted to go to the beach, ________ it started raining heavily.", options: ["A) and", "B) but", "C) so", "D) because"], correctIndex: 1, explain: "แสดงความขัดแย้ง (อยากไปชายหาด แต่ฝนตก) ใช้ 'but'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "He was very tired, ________ he went to bed early.", options: ["A) because", "B) but", "C) so", "D) although"], correctIndex: 2, explain: "แสดงผลลัพธ์ (เหนื่อยมาก จึงเข้านอนเร็ว) ใช้ 'so'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "She couldn't come to school ________ she was sick.", options: ["A) because", "B) but", "C) so", "D) and"], correctIndex: 0, explain: "บอกเหตุผล (ไม่ได้มาโรงเรียนเพราะป่วย) ใช้ 'because'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "You can have tea ________ you can have coffee. It's up to you.", options: ["A) and", "B) or", "C) but", "D) so"], correctIndex: 1, explain: "แสดงทางเลือกอย่างใดอย่างหนึ่ง ใช้ 'or'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "________ it was raining, we still went for a walk in the park.", options: ["A) Because", "B) Although", "C) So", "D) But"], correctIndex: 1, explain: "แสดงความขัดแย้งในประโยคย่อย (แม้ว่าฝนจะตก) ใช้ 'Although'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "I like reading books, ________ my sister prefers playing video games.", options: ["A) and", "B) while", "C) because", "D) so"], correctIndex: 1, explain: "เปรียบเทียบความแตกต่างในขณะเดียวกัน ใช้ 'while' หรือ 'whereas'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "She finished her homework ________ went out to play with friends.", options: ["A) but", "B) and", "C) or", "D) because"], correctIndex: 1, explain: "เชื่อมประโยคที่เป็นไปในทิศทางเดียวกัน (ทำการบ้านเสร็จและออกไปเล่น) ใช้ 'and'" },
+      { chapterId: 4, chapterName: "4. Connectors", title: "Take your umbrella with you ________ it rains later.", options: ["A) because", "B) in case", "C) so", "D) but"], correctIndex: 1, explain: "เผื่อไว้ในกรณีที่... ใช้ 'in case'" },
+
+      // --- 5. Tenses (Present & Past) (ข้อ 34-43)[cite: 11] ---
+      { chapterId: 5, chapterName: "5. Tenses", title: "Water ________ at 100 degrees Celsius.", options: ["A) boil", "B) boils", "C) boiled", "D) is boiling"], correctIndex: 1, explain: "เป็นความจริงทางวิทยาศาสตร์ ใช้ Present Simple Tense (ประธาน Water เป็นเอกพจน์ ใช้ boils)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "Listen! Someone ________ at the front door.", options: ["A) knocks", "B) is knocking", "C) knocked", "D) has knocked"], correctIndex: 1, explain: "มีคำว่า 'Listen!' บ่งบอกว่าเหตุการณ์กำลังเกิดขึ้นขณะพูด ใช้ Present Continuous Tense" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "Columbus ________ America in 1492.", options: ["A) discover", "B) discovers", "C) discovered", "D) is discovering"], correctIndex: 2, explain: "เป็นเหตุการณ์ในอดีตระบุปีชัดเจน (1492) ใช้ Past Simple Tense (discovered)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "What ________ you ________ yesterday evening?", options: ["A) do / do", "B) did / do", "C) are / doing", "D) were / do"], correctIndex: 1, explain: "มีคำบอกเวลาอดีต 'yesterday evening' ใช้ Past Simple Tense ในรูปแบบคำถาม (Did + ประธาน + V.1)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "She usually ________ to school by bus, but today she walked.", options: ["A) go", "B) goes", "C) went", "D) is going"], correctIndex: 1, explain: "มีคำว่า 'usually' แสดงกิจวัตรประจำวัน ใช้ Present Simple (ประธาน She ใช้ goes)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "They ________ football when it started to rain.", options: ["A) play", "B) are playing", "C) were playing", "D) played"], correctIndex: 2, explain: "เหตุการณ์กำลังดำเนินอยู่ (Past Continuous) แล้วมีเหตุการณ์อื่นแทรกเข้ามา (Past Simple)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "Look at those dark clouds! It ________ rain soon.", options: ["A) is going to", "B) will", "C) boils", "D) did"], correctIndex: 0, explain: "มีหลักฐานชัดเจนตรงหน้า (ก้อนเมฆมืดครึ้ม) ใช้ 'is going to' เพื่อคาดการณ์อนาคต" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "I ________ my homework yet. I will do it later.", options: ["A) haven't finished", "B) didn't finish", "C) don't finish", "D) hadn't finished"], correctIndex: 0, explain: "มีคำว่า 'yet' ในประโยคปฏิเสธ มักใช้กับ Present Perfect Tense (haven't finished)" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "If it ________ tomorrow, we will cancel the picnic.", options: ["A) rain", "B) rains", "C) rained", "D) will rain"], correctIndex: 1, explain: "Conditional Sentence Type 1 (If + Present Simple, S + will + V.1) ประธาน it ใช้ rains" },
+      { chapterId: 5, chapterName: "5. Tenses", title: "While I ________ dinner, the phone rang.", options: ["A) cook", "B) cooked", "C) was cooking", "D) am cooking"], correctIndex: 2, explain: "เหตุการณ์กำลังทำอยู่ยาวๆ ในอดีต 'While I was cooking' แล้วมีเหตุการณ์สั้นแทรกเข้ามา" },
+
+      // --- 6. Question Tags (ข้อ 44-50)[cite: 11] ---
+      { chapterId: 6, chapterName: "6. Question Tags", title: "You are a student, ________ you?", options: ["A) are", "B) aren't", "C) do", "D) don't"], correctIndex: 1, explain: "ประโยคบอกเล่า Verb to be (are) ทำ Tag ให้เป็นปฏิเสธย่อคือ 'aren't you?'[cite: 11]" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "She speaks English fluently, ________ she?", options: ["A) does", "B) doesn't", "C) is", "D) isn't"], correctIndex: 1, explain: "ประโยคบอกเล่ากริยาช่อง 1 เติม s (speaks) ทำ Tag ใช้ Verb to do คือ 'doesn't she?'" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "They didn't win the match, ________ they?", options: ["A) do", "B) don't", "C) did", "D) didn't"], correctIndex: 2, explain: "ประโยคปฏิเสธ (didn't win) ทำ Tag ให้เป็นบอกเล่าคือ 'did they?'" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "Let's go for a walk in the park, ________?", options: ["A) will you", "B) shall we", "C) do we", "D) aren't we"], correctIndex: 1, explain: "สำนวนชักชวนขึ้นต้นด้วย 'Let's...' ใช้ Question Tag เป็น 'shall we?' เสมอ" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "Tom has a new computer, ________?", options: ["A) has he", "B) hasn't he", "C) does he", "D) doesn't he"], correctIndex: 1, explain: "คำว่า has ในที่นี้แปลว่ามี (Possession) สามารถใช้ tag เป็น 'hasn't he?' หรือ 'doesn't he?' (นิยม hasn't he ในภาษาอังกฤษแบบบริติช)" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "Nobody called me while I was out, ________?", options: ["A) did they", "B) didn't they", "C) were they", "D) weren't they"], correctIndex: 0, explain: "ประธานเป็น 'Nobody' ถือว่าเป็นปฏิเสธในตัว และแทนด้วยสรรพนามพหูพจน์ 'they' ดังนั้น Tag จึงเป็นบอกเล่า 'did they'" },
+      { chapterId: 6, chapterName: "6. Question Tags", title: "Close the door, ________?", options: ["A) will you", "B) do you", "C) are you", "D) shall we"], correctIndex: 0, explain: "ประโยคคำสั่ง (Imperative) ใช้ Tag มาตรฐานคือ 'will you?' หรือ 'won't you?'" }
+    ];
+
+    let currentQuestion = null;
+    let selectedOptionIndex = null;
+    let totalScore = 0;
+    let isChecked = false;
+    let currentIndexNum = 1;
+
+    function loadRandomQuestion() {
+      const selectedChapter = document.getElementById('chapter-select').value;
+      let availableQuestions = questionBank;
+
+      if (selectedChapter !== 'all') {
+        availableQuestions = questionBank.filter(q => q.chapterId == selectedChapter);
+      }
+
+      if (availableQuestions.length === 0) {
+        alert("ไม่พบโจทย์ในหัวข้อนี้");
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+      currentQuestion = availableQuestions[randomIndex];
+
+      selectedOptionIndex = null;
+      isChecked = false;
+
+      document.getElementById('question-chapter').innerText = currentQuestion.chapterName;
+      document.getElementById('question-title').innerText = `${currentIndexNum}. ${currentQuestion.title}`;
+      document.getElementById('question-status').innerText = 'ยังไม่ได้ตอบ';
+      document.getElementById('question-status').style.backgroundColor = '#f1f5f9';
+      document.getElementById('question-status').style.color = '#64748b';
+
+      document.getElementById('btn-explain').style.display = 'none';
+      document.getElementById('explanation-box').style.display = 'none';
+
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      currentQuestion.options.forEach((optText, index) => {
+        const item = document.createElement('label');
+        item.className = 'option-item';
+        item.onclick = () => selectOption(index);
+        item.innerHTML = `
+          <span class="option-text">${optText}</span>
+          <div class="radio-circle"></div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function selectOption(index) {
+      if (isChecked) return;
+      selectedOptionIndex = index;
+      const items = document.querySelectorAll('.option-item');
+      items.forEach((item, idx) => {
+        if (idx === index) {
+          item.classList.add('selected');
+        } else {
+          item.classList.remove('selected');
+        }
+      });
+      document.getElementById('question-status').innerText = 'ตอบแล้ว';
+      document.getElementById('question-status').style.backgroundColor = '#e0f2fe';
+      document.getElementById('question-status').style.color = '#0369a1';
+    }
+
+    function checkAnswer() {
+      if (selectedOptionIndex === null) {
+        alert("กรุณาเลือกคำตอบก่อนกดตรวจครับ!");
+        return;
+      }
+
+      if (isChecked) return;
+      isChecked = true;
+
+      const items = document.querySelectorAll('.option-item');
+      items.forEach(item => item.classList.add('disabled'));
+
+      const isCorrect = (selectedOptionIndex === currentQuestion.correctIndex);
+
+      if (isCorrect) {
+        items[selectedOptionIndex].classList.add('correct');
+        totalScore += 1;
+        document.getElementById('score-count').innerText = totalScore;
+        document.getElementById('question-status').innerText = 'ถูกต้อง! (+1)';
+        document.getElementById('question-status').style.backgroundColor = '#dcfce7';
+        document.getElementById('question-status').style.color = '#166534';
+      } else {
+        items[selectedOptionIndex].classList.add('wrong');
+        items[currentQuestion.correctIndex].classList.add('correct');
+        document.getElementById('question-status').innerText = 'ตอบผิด';
+        document.getElementById('question-status').style.backgroundColor = '#fee2e2';
+        document.getElementById('question-status').style.color = '#991b1b';
+      }
+
+      document.getElementById('btn-explain').style.display = 'inline-flex';
+      document.getElementById('explanation-text').innerHTML = currentQuestion.explain;
+
+      currentIndexNum = (currentIndexNum % 50) + 1;
+      document.getElementById('current-index').innerText = currentIndexNum;
+      document.getElementById('progress-bar').style.width = `${(currentIndexNum / 50) * 100}%`;
+    }
+
+    function toggleExplanation() {
+      const box = document.getElementById('explanation-box');
+      box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function filterQuestions() {
+      loadRandomQuestion();
+    }
+
+    window.onload = loadRandomQuestion;
+  </script>
+</body>
+
+</html>
